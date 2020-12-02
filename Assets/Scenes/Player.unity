@@ -348,6 +348,7 @@ MonoBehaviour:
   - {fileID: 1379332148}
   - {fileID: 1831218854}
   - {fileID: 244008558}
+  _debugOnGui: 1
 --- !u!1 &491007613
 GameObject:
   m_ObjectHideFlags: 0
