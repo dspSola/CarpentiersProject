@@ -4,220 +4,226 @@ TextureImporter:
   internalIDToNameTable:
   - first:
       213: 383490961038363683
-    second: TilesSheet_0
+    second: Platform_0
   - first:
       213: -2100064700172131651
-    second: TilesSheet_1
+    second: Walk_1
   - first:
       213: 4797537416911354522
-    second: TilesSheet_2
+    second: Walk_2
   - first:
       213: 256359302125338526
-    second: TilesSheet_3
+    second: Walk_3
   - first:
       213: 4387116141799594514
-    second: TilesSheet_4
+    second: TurnLeftIdle_1
   - first:
       213: 6562323930635717825
-    second: TilesSheet_5
+    second: TurnFaceIdle_1
   - first:
       213: 2359881719257322247
-    second: TilesSheet_6
+    second: TurnRightIdle_1
   - first:
       213: -8609145580084340125
-    second: TilesSheet_7
+    second: TurnBackIdle_1
   - first:
       213: 676843574507369988
-    second: TilesSheet_8
+    second: Die_1
   - first:
       213: -5887213669000475421
-    second: TilesSheet_9
+    second: Die2
   - first:
       213: -43973073094068955
-    second: TilesSheet_10
+    second: Die3
   - first:
       213: 3330128466686338700
-    second: TilesSheet_11
+    second: Die4
   - first:
       213: 4534361846114567870
-    second: TilesSheet_12
+    second: SlideRight_1
   - first:
       213: -4649495558253484832
-    second: TilesSheet_13
+    second: SlideRight_2
   - first:
       213: -2314470220260304696
-    second: TilesSheet_14
+    second: SlideRight_3
   - first:
       213: -695635784218213979
-    second: TilesSheet_15
+    second: SlideRight_4
   - first:
       213: 6830576432249156684
-    second: TilesSheet_16
+    second: SlideLeft_1
   - first:
       213: -3726515721465741549
-    second: TilesSheet_17
+    second: SlideLeft_2
   - first:
       213: 4009920383557736170
-    second: TilesSheet_18
+    second: SlideLeft_3
   - first:
       213: 4651816515139398863
-    second: TilesSheet_19
+    second: SlideLeft_4
   - first:
       213: 3872825572334663672
-    second: TilesSheet_20
+    second: TurnLeftIdle_2
   - first:
       213: -3938195219952950329
-    second: TilesSheet_21
+    second: TurnFaceIdle_2
   - first:
       213: 139106605747894709
-    second: TilesSheet_22
+    second: TurnRightIdle_2
   - first:
       213: 6814023503764315698
-    second: TilesSheet_23
+    second: TurnBackIdle_2
   - first:
       213: 4027099030017347609
-    second: TilesSheet_24
+    second: JumpLeft_1
   - first:
       213: -6690625854837126232
-    second: TilesSheet_25
+    second: JumpLeft_2
   - first:
       213: 8647652406257321104
-    second: TilesSheet_26
+    second: JumpLeft_3
   - first:
       213: -3218689247744682364
-    second: TilesSheet_27
+    second: JumpLeft_4
   - first:
       213: 3475692139257367328
-    second: TilesSheet_28
+    second: JumpRight_1
   - first:
       213: -5573988888199623967
-    second: TilesSheet_29
+    second: JumpRight_2
   - first:
       213: -3742320272447604656
-    second: TilesSheet_30
+    second: JumpRight_3
   - first:
       213: 3228060602251604146
-    second: TilesSheet_31
+    second: JumpRight_4
   - first:
       213: -2954310888430610466
-    second: TilesSheet_32
+    second: TurnLeftIdle_3
   - first:
       213: -7241979070369050889
-    second: TilesSheet_33
+    second: TurnFaceIdle_3
   - first:
       213: 1099667610691014112
-    second: TilesSheet_34
+    second: TurnRightIdle_3
   - first:
       213: 8750300092157067249
-    second: TilesSheet_35
+    second: Bonus_1
   - first:
       213: 3383967930857108278
-    second: TilesSheet_36
+    second: FallDownLeft_1
   - first:
       213: -3410874451636703264
-    second: TilesSheet_37
+    second: FallDownLeft_2
   - first:
       213: -2603512741587926625
-    second: TilesSheet_38
+    second: FallDownLeft_3
   - first:
       213: 2669361186756078128
-    second: TilesSheet_39
+    second: FallDownFace
   - first:
       213: -109495942065707196
-    second: TilesSheet_40
+    second: FallDownBack
   - first:
       213: -8258848307578668668
-    second: TilesSheet_41
+    second: FallDownRight_3
   - first:
       213: -143648899601819931
-    second: TilesSheet_42
+    second: FallDownRight_2
   - first:
       213: 2651520864917075637
-    second: TilesSheet_43
+    second: FallDownRight_1
   - first:
       213: -1288037430325307199
-    second: TilesSheet_44
+    second: border_1
   - first:
       213: 5625633833608761179
-    second: TilesSheet_45
+    second: border2
   - first:
       213: 1790908100246091040
-    second: TilesSheet_46
+    second: border3
   - first:
       213: 911059146966434582
-    second: TilesSheet_47
+    second: bonus_2
   - first:
       213: 3478666127437364619
-    second: TilesSheet_48
+    second: Platform_1
   - first:
       213: 7773695936107509916
-    second: TilesSheet_49
+    second: Platform_2
   - first:
       213: 319210887490547034
-    second: TilesSheet_50
+    second: Platform_3
   - first:
       213: -156397561516158827
-    second: TilesSheet_51
+    second: Platform_4
   - first:
       213: 8082102645815379234
-    second: TilesSheet_52
+    second: Platform_5
   - first:
       213: 1716937070123164386
-    second: TilesSheet_53
+    second: Platform_6
   - first:
       213: 7534833473192652012
-    second: TilesSheet_54
+    second: Platform_7
   - first:
       213: 5155870285203109625
-    second: TilesSheet_55
+    second: Platform_8
   - first:
       213: 6185267218219793978
-    second: TilesSheet_56
+    second: coins_1
   - first:
       213: -1489166502987022562
-    second: TilesSheet_57
+    second: coins_2
   - first:
       213: 5577655878287423313
-    second: TilesSheet_58
+    second: coins_3
   - first:
       213: -3031806277416562475
-    second: TilesSheet_59
+    second: coins_4
   - first:
       213: 6062494589781790677
-    second: TilesSheet_60
+    second: Platform_9
   - first:
       213: 8092076558379114535
-    second: TilesSheet_61
+    second: Platform_10
   - first:
       213: 3647195431346072338
-    second: TilesSheet_62
+    second: Platform_11
   - first:
       213: -5333862658976716471
-    second: TilesSheet_63
+    second: Platform_12
   - first:
       213: 2032230334799361798
-    second: TilesSheet_64
+    second: Platform_13
   - first:
       213: -1855104151674601034
-    second: TilesSheet_65
+    second: Platform_14
   - first:
       213: -7305263293420248913
-    second: TilesSheet_66
+    second: Platform_15
   - first:
       213: 5658835800463888349
-    second: TilesSheet_67
+    second: Platform_16
   - first:
       213: -4012769279468174186
-    second: TilesSheet_68
+    second: Platform_17
   - first:
       213: -3445261775606213410
-    second: TilesSheet_69
+    second: Platform_18
   - first:
       213: 4731724109913402508
-    second: TilesSheet_70
+    second: Platform_19
   - first:
       213: -670262782118408826
-    second: TilesSheet_71
+    second: Platform_20
+  - first:
+      213: 3274539448927893783
+    second: TilesSheetMain_0
+  - first:
+      213: -1325423250926444534
+    second: TilesSheetMain_1
   externalObjects: {}
   serializedVersion: 11
   mipmaps:
@@ -339,7 +345,7 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: TilesSheet_0
+      name: Platform_0
       rect:
         serializedVersion: 2
         x: 0
@@ -350,7 +356,11 @@ TextureImporter:
       pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
-      physicsShape: []
+      physicsShape:
+      - - {x: -1, y: 2}
+        - {x: -1, y: -1}
+        - {x: 1, y: -1}
+        - {x: 1, y: 2}
       tessellationDetail: 0
       bones: []
       spriteID: 32cc34b4ffe625500800000000000000
@@ -360,7 +370,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: TilesSheet_1
+      name: Walk_1
       rect:
         serializedVersion: 2
         x: 4
@@ -371,7 +381,11 @@ TextureImporter:
       pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
-      physicsShape: []
+      physicsShape:
+      - - {x: -2, y: 4}
+        - {x: -2, y: -4}
+        - {x: 2, y: -4}
+        - {x: 2, y: 4}
       tessellationDetail: 0
       bones: []
       spriteID: db227e428421bd2e0800000000000000
@@ -381,7 +395,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: TilesSheet_2
+      name: Walk_2
       rect:
         serializedVersion: 2
         x: 8
@@ -392,7 +406,11 @@ TextureImporter:
       pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
-      physicsShape: []
+      physicsShape:
+      - - {x: -2, y: 4}
+        - {x: -2, y: -4}
+        - {x: 1, y: -4}
+        - {x: 1, y: 4}
       tessellationDetail: 0
       bones: []
       spriteID: a9a75abbcd6449240800000000000000
@@ -402,7 +420,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: TilesSheet_3
+      name: Walk_3
       rect:
         serializedVersion: 2
         x: 12
@@ -413,7 +431,11 @@ TextureImporter:
       pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
-      physicsShape: []
+      physicsShape:
+      - - {x: -2, y: 3}
+        - {x: -2, y: -4}
+        - {x: 2, y: -4}
+        - {x: 2, y: 3}
       tessellationDetail: 0
       bones: []
       spriteID: e9f3c025d65ce8300800000000000000
@@ -423,7 +445,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: TilesSheet_4
+      name: TurnLeftIdle_1
       rect:
         serializedVersion: 2
         x: 16
@@ -434,7 +456,11 @@ TextureImporter:
       pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
-      physicsShape: []
+      physicsShape:
+      - - {x: -2, y: 4}
+        - {x: -2, y: -4}
+        - {x: 1, y: -4}
+        - {x: 1, y: 4}
       tessellationDetail: 0
       bones: []
       spriteID: 21ad85413ea22ec30800000000000000
@@ -444,7 +470,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: TilesSheet_5
+      name: TurnFaceIdle_1
       rect:
         serializedVersion: 2
         x: 20
@@ -455,7 +481,11 @@ TextureImporter:
       pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
-      physicsShape: []
+      physicsShape:
+      - - {x: -1, y: 4}
+        - {x: -1, y: -4}
+        - {x: 1, y: -4}
+        - {x: 1, y: 4}
       tessellationDetail: 0
       bones: []
       spriteID: 1cc4692a8de021b50800000000000000
@@ -465,7 +495,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: TilesSheet_6
+      name: TurnRightIdle_1
       rect:
         serializedVersion: 2
         x: 24
@@ -476,7 +506,11 @@ TextureImporter:
       pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
-      physicsShape: []
+      physicsShape:
+      - - {x: -2, y: 4}
+        - {x: -2, y: -4}
+        - {x: 2, y: -4}
+        - {x: 2, y: 4}
       tessellationDetail: 0
       bones: []
       spriteID: 7035544abebffb020800000000000000
@@ -486,7 +520,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: TilesSheet_7
+      name: TurnBackIdle_1
       rect:
         serializedVersion: 2
         x: 28
@@ -497,7 +531,11 @@ TextureImporter:
       pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
-      physicsShape: []
+      physicsShape:
+      - - {x: -1, y: 4}
+        - {x: -1, y: -4}
+        - {x: 1, y: -4}
+        - {x: 1, y: 4}
       tessellationDetail: 0
       bones: []
       spriteID: 36ad27745bb268880800000000000000
@@ -507,7 +545,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: TilesSheet_8
+      name: Die_1
       rect:
         serializedVersion: 2
         x: 32
@@ -518,7 +556,11 @@ TextureImporter:
       pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
-      physicsShape: []
+      physicsShape:
+      - - {x: -2, y: 4}
+        - {x: -2, y: -4}
+        - {x: 2, y: -4}
+        - {x: 2, y: 4}
       tessellationDetail: 0
       bones: []
       spriteID: 406740b15a1a46900800000000000000
@@ -528,7 +570,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: TilesSheet_9
+      name: Die2
       rect:
         serializedVersion: 2
         x: 36
@@ -539,7 +581,11 @@ TextureImporter:
       pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
-      physicsShape: []
+      physicsShape:
+      - - {x: -1, y: 3}
+        - {x: -1, y: -2}
+        - {x: 1, y: -2}
+        - {x: 1, y: 3}
       tessellationDetail: 0
       bones: []
       spriteID: 3ec076e1c5a6c4ea0800000000000000
@@ -549,7 +595,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: TilesSheet_10
+      name: Die3
       rect:
         serializedVersion: 2
         x: 40
@@ -560,7 +606,11 @@ TextureImporter:
       pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
-      physicsShape: []
+      physicsShape:
+      - - {x: -2, y: 4}
+        - {x: -2, y: -4}
+        - {x: 2, y: -4}
+        - {x: 2, y: 4}
       tessellationDetail: 0
       bones: []
       spriteID: 525bb8619b6c36ff0800000000000000
@@ -570,7 +620,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: TilesSheet_11
+      name: Die4
       rect:
         serializedVersion: 2
         x: 44
@@ -581,7 +631,11 @@ TextureImporter:
       pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
-      physicsShape: []
+      physicsShape:
+      - - {x: -2, y: 4}
+        - {x: -2, y: -4}
+        - {x: 2, y: -4}
+        - {x: 2, y: 4}
       tessellationDetail: 0
       bones: []
       spriteID: c866149523ef63e20800000000000000
@@ -591,7 +645,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: TilesSheet_12
+      name: SlideRight_1
       rect:
         serializedVersion: 2
         x: 0
@@ -602,7 +656,11 @@ TextureImporter:
       pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
-      physicsShape: []
+      physicsShape:
+      - - {x: -2, y: 4}
+        - {x: -2, y: -4}
+        - {x: 2, y: -4}
+        - {x: 2, y: 4}
       tessellationDetail: 0
       bones: []
       spriteID: eb64eb0331a4dee30800000000000000
@@ -612,7 +670,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: TilesSheet_13
+      name: SlideRight_2
       rect:
         serializedVersion: 2
         x: 4
@@ -623,7 +681,11 @@ TextureImporter:
       pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
-      physicsShape: []
+      physicsShape:
+      - - {x: -2, y: 4}
+        - {x: -2, y: -4}
+        - {x: 2, y: -4}
+        - {x: 2, y: 4}
       tessellationDetail: 0
       bones: []
       spriteID: 0e46b818c6ca97fb0800000000000000
@@ -633,7 +695,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: TilesSheet_14
+      name: SlideRight_3
       rect:
         serializedVersion: 2
         x: 8
@@ -644,7 +706,11 @@ TextureImporter:
       pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
-      physicsShape: []
+      physicsShape:
+      - - {x: -2, y: 4}
+        - {x: -2, y: -3}
+        - {x: 2, y: -3}
+        - {x: 2, y: 4}
       tessellationDetail: 0
       bones: []
       spriteID: 8c81a26e89951efd0800000000000000
@@ -654,7 +720,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: TilesSheet_15
+      name: SlideRight_4
       rect:
         serializedVersion: 2
         x: 12
@@ -665,7 +731,11 @@ TextureImporter:
       pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
-      physicsShape: []
+      physicsShape:
+      - - {x: -2, y: 4}
+        - {x: -2, y: -3}
+        - {x: 2, y: -3}
+        - {x: 2, y: 4}
       tessellationDetail: 0
       bones: []
       spriteID: 5a18f9c90fa9856f0800000000000000
@@ -675,7 +745,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: TilesSheet_16
+      name: SlideLeft_1
       rect:
         serializedVersion: 2
         x: 16
@@ -686,7 +756,11 @@ TextureImporter:
       pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
-      physicsShape: []
+      physicsShape:
+      - - {x: -2, y: 4}
+        - {x: -2, y: -3}
+        - {x: 2, y: -3}
+        - {x: 2, y: 4}
       tessellationDetail: 0
       bones: []
       spriteID: c44bd5f33151bce50800000000000000
@@ -696,7 +770,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: TilesSheet_17
+      name: SlideLeft_2
       rect:
         serializedVersion: 2
         x: 20
@@ -707,7 +781,11 @@ TextureImporter:
       pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
-      physicsShape: []
+      physicsShape:
+      - - {x: -2, y: 4}
+        - {x: -2, y: -3}
+        - {x: 2, y: -3}
+        - {x: 2, y: 4}
       tessellationDetail: 0
       bones: []
       spriteID: 31f302cf1b1c84cc0800000000000000
@@ -717,7 +795,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: TilesSheet_18
+      name: SlideLeft_3
       rect:
         serializedVersion: 2
         x: 24
@@ -728,7 +806,11 @@ TextureImporter:
       pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
-      physicsShape: []
+      physicsShape:
+      - - {x: -2, y: 4}
+        - {x: -2, y: -4}
+        - {x: 2, y: -4}
+        - {x: 2, y: 4}
       tessellationDetail: 0
       bones: []
       spriteID: ae69e87e75916a730800000000000000
@@ -738,7 +820,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: TilesSheet_19
+      name: SlideLeft_4
       rect:
         serializedVersion: 2
         x: 28
@@ -749,7 +831,11 @@ TextureImporter:
       pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
-      physicsShape: []
+      physicsShape:
+      - - {x: -2, y: 4}
+        - {x: -2, y: -4}
+        - {x: 2, y: -4}
+        - {x: 2, y: 4}
       tessellationDetail: 0
       bones: []
       spriteID: fcced2169729e8040800000000000000
@@ -759,7 +845,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: TilesSheet_20
+      name: TurnLeftIdle_2
       rect:
         serializedVersion: 2
         x: 32
@@ -770,7 +856,11 @@ TextureImporter:
       pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
-      physicsShape: []
+      physicsShape:
+      - - {x: -2, y: 4}
+        - {x: -2, y: -4}
+        - {x: 1, y: -4}
+        - {x: 1, y: 4}
       tessellationDetail: 0
       bones: []
       spriteID: 8f77e04c65a0fb530800000000000000
@@ -780,7 +870,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: TilesSheet_21
+      name: TurnFaceIdle_2
       rect:
         serializedVersion: 2
         x: 36
@@ -791,7 +881,11 @@ TextureImporter:
       pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
-      physicsShape: []
+      physicsShape:
+      - - {x: -1, y: 4}
+        - {x: -1, y: -4}
+        - {x: 1, y: -4}
+        - {x: 1, y: 4}
       tessellationDetail: 0
       bones: []
       spriteID: 7c3209a1058b859c0800000000000000
@@ -801,7 +895,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: TilesSheet_22
+      name: TurnRightIdle_2
       rect:
         serializedVersion: 2
         x: 40
@@ -812,7 +906,11 @@ TextureImporter:
       pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
-      physicsShape: []
+      physicsShape:
+      - - {x: -1, y: 4}
+        - {x: -1, y: -4}
+        - {x: 2, y: -4}
+        - {x: 2, y: 4}
       tessellationDetail: 0
       bones: []
       spriteID: 5b9738d88b43ee100800000000000000
@@ -822,7 +920,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: TilesSheet_23
+      name: TurnBackIdle_2
       rect:
         serializedVersion: 2
         x: 44
@@ -833,7 +931,11 @@ TextureImporter:
       pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
-      physicsShape: []
+      physicsShape:
+      - - {x: -1, y: 4}
+        - {x: -1, y: -4}
+        - {x: 1, y: -4}
+        - {x: 1, y: 4}
       tessellationDetail: 0
       bones: []
       spriteID: 23ed8014646409e50800000000000000
@@ -843,7 +945,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: TilesSheet_24
+      name: JumpLeft_1
       rect:
         serializedVersion: 2
         x: 0
@@ -854,7 +956,11 @@ TextureImporter:
       pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
-      physicsShape: []
+      physicsShape:
+      - - {x: -2, y: 4}
+        - {x: -2, y: -4}
+        - {x: 1, y: -4}
+        - {x: 1, y: 4}
       tessellationDetail: 0
       bones: []
       spriteID: 91011873b3123e730800000000000000
@@ -864,7 +970,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: TilesSheet_25
+      name: JumpLeft_2
       rect:
         serializedVersion: 2
         x: 4
@@ -875,7 +981,11 @@ TextureImporter:
       pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
-      physicsShape: []
+      physicsShape:
+      - - {x: -1, y: 4}
+        - {x: -1, y: -4}
+        - {x: 2, y: -4}
+        - {x: 2, y: 4}
       tessellationDetail: 0
       bones: []
       spriteID: 8ab8365cb3f1623a0800000000000000
@@ -885,7 +995,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: TilesSheet_26
+      name: JumpLeft_3
       rect:
         serializedVersion: 2
         x: 8
@@ -896,7 +1006,11 @@ TextureImporter:
       pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
-      physicsShape: []
+      physicsShape:
+      - - {x: -2, y: 4}
+        - {x: -2, y: -4}
+        - {x: 2, y: -4}
+        - {x: 2, y: 4}
       tessellationDetail: 0
       bones: []
       spriteID: 0940508db02a20870800000000000000
@@ -906,7 +1020,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: TilesSheet_27
+      name: JumpLeft_4
       rect:
         serializedVersion: 2
         x: 12
@@ -917,7 +1031,11 @@ TextureImporter:
       pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
-      physicsShape: []
+      physicsShape:
+      - - {x: -2, y: 3}
+        - {x: -2, y: -4}
+        - {x: 2, y: -4}
+        - {x: 2, y: 3}
       tessellationDetail: 0
       bones: []
       spriteID: 4861fc9be2be453d0800000000000000
@@ -927,7 +1045,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: TilesSheet_28
+      name: JumpRight_1
       rect:
         serializedVersion: 2
         x: 16
@@ -938,7 +1056,11 @@ TextureImporter:
       pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
-      physicsShape: []
+      physicsShape:
+      - - {x: -2, y: 3}
+        - {x: -2, y: -4}
+        - {x: 2, y: -4}
+        - {x: 2, y: 3}
       tessellationDetail: 0
       bones: []
       spriteID: 02b8d0de5932c3030800000000000000
@@ -948,7 +1070,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: TilesSheet_29
+      name: JumpRight_2
       rect:
         serializedVersion: 2
         x: 20
@@ -959,7 +1081,11 @@ TextureImporter:
       pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
-      physicsShape: []
+      physicsShape:
+      - - {x: -1, y: 4}
+        - {x: -1, y: -2}
+        - {x: 2, y: -2}
+        - {x: 2, y: 4}
       tessellationDetail: 0
       bones: []
       spriteID: 1ea03e073a635a2b0800000000000000
@@ -969,7 +1095,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: TilesSheet_30
+      name: JumpRight_3
       rect:
         serializedVersion: 2
         x: 24
@@ -980,7 +1106,11 @@ TextureImporter:
       pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
-      physicsShape: []
+      physicsShape:
+      - - {x: -2, y: 4}
+        - {x: -2, y: -4}
+        - {x: 2, y: -4}
+        - {x: 2, y: 4}
       tessellationDetail: 0
       bones: []
       spriteID: 05874053a8b901cc0800000000000000
@@ -990,7 +1120,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: TilesSheet_31
+      name: JumpRight_4
       rect:
         serializedVersion: 2
         x: 28
@@ -1001,7 +1131,11 @@ TextureImporter:
       pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
-      physicsShape: []
+      physicsShape:
+      - - {x: -1, y: -4}
+        - {x: 2, y: -4}
+        - {x: 2, y: 3}
+        - {x: -1, y: 3}
       tessellationDetail: 0
       bones: []
       spriteID: 2b0f3a6c3006ccc20800000000000000
@@ -1011,7 +1145,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: TilesSheet_32
+      name: TurnLeftIdle_3
       rect:
         serializedVersion: 2
         x: 32
@@ -1022,7 +1156,11 @@ TextureImporter:
       pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
-      physicsShape: []
+      physicsShape:
+      - - {x: -1, y: 3}
+        - {x: -1, y: -4}
+        - {x: 1, y: -4}
+        - {x: 1, y: 3}
       tessellationDetail: 0
       bones: []
       spriteID: ed7560b46ed2007d0800000000000000
@@ -1032,7 +1170,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: TilesSheet_33
+      name: TurnFaceIdle_3
       rect:
         serializedVersion: 2
         x: 36
@@ -1043,7 +1181,11 @@ TextureImporter:
       pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
-      physicsShape: []
+      physicsShape:
+      - - {x: -1, y: 3}
+        - {x: -1, y: -4}
+        - {x: 1, y: -4}
+        - {x: 1, y: 3}
       tessellationDetail: 0
       bones: []
       spriteID: 7fec6d7b7625f7b90800000000000000
@@ -1053,7 +1195,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: TilesSheet_34
+      name: TurnRightIdle_3
       rect:
         serializedVersion: 2
         x: 40
@@ -1064,7 +1206,11 @@ TextureImporter:
       pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
-      physicsShape: []
+      physicsShape:
+      - - {x: -1, y: 3}
+        - {x: -1, y: -4}
+        - {x: 1, y: -4}
+        - {x: 1, y: 3}
       tessellationDetail: 0
       bones: []
       spriteID: 0ed8d3a9dddc24f00800000000000000
@@ -1074,7 +1220,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: TilesSheet_35
+      name: Bonus_1
       rect:
         serializedVersion: 2
         x: 44
@@ -1085,7 +1231,11 @@ TextureImporter:
       pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
-      physicsShape: []
+      physicsShape:
+      - - {x: -1, y: 4}
+        - {x: -1, y: -3}
+        - {x: 1, y: -3}
+        - {x: 1, y: 4}
       tessellationDetail: 0
       bones: []
       spriteID: 1fff61f929f4f6970800000000000000
@@ -1095,7 +1245,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: TilesSheet_36
+      name: FallDownLeft_1
       rect:
         serializedVersion: 2
         x: 0
@@ -1106,7 +1256,11 @@ TextureImporter:
       pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
-      physicsShape: []
+      physicsShape:
+      - - {x: -2, y: 4}
+        - {x: -2, y: -4}
+        - {x: 2, y: -4}
+        - {x: 2, y: 4}
       tessellationDetail: 0
       bones: []
       spriteID: 6333d0277e446fe20800000000000000
@@ -1116,7 +1270,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: TilesSheet_37
+      name: FallDownLeft_2
       rect:
         serializedVersion: 2
         x: 4
@@ -1127,7 +1281,11 @@ TextureImporter:
       pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
-      physicsShape: []
+      physicsShape:
+      - - {x: -2, y: 4}
+        - {x: -2, y: -4}
+        - {x: 2, y: -4}
+        - {x: 2, y: 4}
       tessellationDetail: 0
       bones: []
       spriteID: 0ef2db002c32aa0d0800000000000000
@@ -1137,7 +1295,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: TilesSheet_38
+      name: FallDownLeft_3
       rect:
         serializedVersion: 2
         x: 8
@@ -1148,7 +1306,11 @@ TextureImporter:
       pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
-      physicsShape: []
+      physicsShape:
+      - - {x: -2, y: 4}
+        - {x: -2, y: -4}
+        - {x: 2, y: -4}
+        - {x: 2, y: 4}
       tessellationDetail: 0
       bones: []
       spriteID: f91c27d94f67edbd0800000000000000
@@ -1158,7 +1320,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: TilesSheet_39
+      name: FallDownFace
       rect:
         serializedVersion: 2
         x: 12
@@ -1169,7 +1331,11 @@ TextureImporter:
       pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
-      physicsShape: []
+      physicsShape:
+      - - {x: -2, y: 4}
+        - {x: -2, y: -4}
+        - {x: 2, y: -4}
+        - {x: 2, y: 4}
       tessellationDetail: 0
       bones: []
       spriteID: 03aafc14bd97b0520800000000000000
@@ -1179,7 +1345,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: TilesSheet_40
+      name: FallDownBack
       rect:
         serializedVersion: 2
         x: 16
@@ -1190,7 +1356,11 @@ TextureImporter:
       pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
-      physicsShape: []
+      physicsShape:
+      - - {x: -2, y: 4}
+        - {x: -2, y: -4}
+        - {x: 2, y: -4}
+        - {x: 2, y: 4}
       tessellationDetail: 0
       bones: []
       spriteID: 447a3d4550efa7ef0800000000000000
@@ -1200,7 +1370,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: TilesSheet_41
+      name: FallDownRight_3
       rect:
         serializedVersion: 2
         x: 20
@@ -1211,7 +1381,11 @@ TextureImporter:
       pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
-      physicsShape: []
+      physicsShape:
+      - - {x: -2, y: 4}
+        - {x: -2, y: -4}
+        - {x: 2, y: -4}
+        - {x: 2, y: 4}
       tessellationDetail: 0
       bones: []
       spriteID: 489ffe4b83da26d80800000000000000
@@ -1221,7 +1395,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: TilesSheet_42
+      name: FallDownRight_2
       rect:
         serializedVersion: 2
         x: 24
@@ -1232,7 +1406,11 @@ TextureImporter:
       pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
-      physicsShape: []
+      physicsShape:
+      - - {x: -2, y: 4}
+        - {x: -2, y: -4}
+        - {x: 2, y: -4}
+        - {x: 2, y: 4}
       tessellationDetail: 0
       bones: []
       spriteID: 5e69bde3618a10ef0800000000000000
@@ -1242,7 +1420,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: TilesSheet_43
+      name: FallDownRight_1
       rect:
         serializedVersion: 2
         x: 28
@@ -1253,7 +1431,11 @@ TextureImporter:
       pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
-      physicsShape: []
+      physicsShape:
+      - - {x: -2, y: 4}
+        - {x: -2, y: -4}
+        - {x: 2, y: -4}
+        - {x: 2, y: 4}
       tessellationDetail: 0
       bones: []
       spriteID: 5b63be3ad281cc420800000000000000
@@ -1263,7 +1445,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: TilesSheet_44
+      name: border_1
       rect:
         serializedVersion: 2
         x: 32
@@ -1274,7 +1456,11 @@ TextureImporter:
       pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
-      physicsShape: []
+      physicsShape:
+      - - {x: -2, y: 4}
+        - {x: -2, y: -4}
+        - {x: 2, y: -4}
+        - {x: 2, y: 4}
       tessellationDetail: 0
       bones: []
       spriteID: 1c89d0c08c8ff1ee0800000000000000
@@ -1284,7 +1470,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: TilesSheet_45
+      name: border2
       rect:
         serializedVersion: 2
         x: 36
@@ -1295,7 +1481,11 @@ TextureImporter:
       pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
-      physicsShape: []
+      physicsShape:
+      - - {x: -2, y: 4}
+        - {x: -2, y: -4}
+        - {x: 2, y: -4}
+        - {x: 2, y: 4}
       tessellationDetail: 0
       bones: []
       spriteID: b5f4ba07a24421e40800000000000000
@@ -1305,7 +1495,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: TilesSheet_46
+      name: border3
       rect:
         serializedVersion: 2
         x: 40
@@ -1316,7 +1506,11 @@ TextureImporter:
       pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
-      physicsShape: []
+      physicsShape:
+      - - {x: -2, y: 4}
+        - {x: -2, y: -4}
+        - {x: 2, y: -4}
+        - {x: 2, y: 4}
       tessellationDetail: 0
       bones: []
       spriteID: 025b984bd659ad810800000000000000
@@ -1326,7 +1520,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: TilesSheet_47
+      name: bonus_2
       rect:
         serializedVersion: 2
         x: 44
@@ -1337,7 +1531,11 @@ TextureImporter:
       pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
-      physicsShape: []
+      physicsShape:
+      - - {x: -2, y: 4}
+        - {x: -2, y: -4}
+        - {x: 2, y: -4}
+        - {x: 2, y: 4}
       tessellationDetail: 0
       bones: []
       spriteID: 6130e48977bb4ac00800000000000000
@@ -1347,7 +1545,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: TilesSheet_48
+      name: Platform_1
       rect:
         serializedVersion: 2
         x: 0
@@ -1358,7 +1556,11 @@ TextureImporter:
       pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
-      physicsShape: []
+      physicsShape:
+      - - {x: -1, y: 4}
+        - {x: -1, y: -4}
+        - {x: 1, y: -4}
+        - {x: 1, y: 4}
       tessellationDetail: 0
       bones: []
       spriteID: b8d76128964b64030800000000000000
@@ -1368,7 +1570,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: TilesSheet_49
+      name: Platform_2
       rect:
         serializedVersion: 2
         x: 4
@@ -1379,7 +1581,11 @@ TextureImporter:
       pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
-      physicsShape: []
+      physicsShape:
+      - - {x: -1, y: 3}
+        - {x: -1, y: -4}
+        - {x: 1, y: -4}
+        - {x: 1, y: 3}
       tessellationDetail: 0
       bones: []
       spriteID: c98f59f5447b1eb60800000000000000
@@ -1389,7 +1595,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: TilesSheet_50
+      name: Platform_3
       rect:
         serializedVersion: 2
         x: 8
@@ -1400,7 +1606,11 @@ TextureImporter:
       pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
-      physicsShape: []
+      physicsShape:
+      - - {x: -1, y: 2}
+        - {x: -1, y: -4}
+        - {x: 1, y: -4}
+        - {x: 1, y: 2}
       tessellationDetail: 0
       bones: []
       spriteID: a5daf456c901e6400800000000000000
@@ -1410,7 +1620,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: TilesSheet_51
+      name: Platform_4
       rect:
         serializedVersion: 2
         x: 12
@@ -1421,7 +1631,11 @@ TextureImporter:
       pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
-      physicsShape: []
+      physicsShape:
+      - - {x: -1, y: 1}
+        - {x: -1, y: -4}
+        - {x: 1, y: -4}
+        - {x: 1, y: 1}
       tessellationDetail: 0
       bones: []
       spriteID: 59097161f3d54ddf0800000000000000
@@ -1431,7 +1645,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: TilesSheet_52
+      name: Platform_5
       rect:
         serializedVersion: 2
         x: 16
@@ -1442,7 +1656,11 @@ TextureImporter:
       pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
-      physicsShape: []
+      physicsShape:
+      - - {x: -1, y: 0}
+        - {x: -1, y: -4}
+        - {x: 1, y: -4}
+        - {x: 1, y: 0}
       tessellationDetail: 0
       bones: []
       spriteID: 225021a1985692070800000000000000
@@ -1452,7 +1670,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: TilesSheet_53
+      name: Platform_6
       rect:
         serializedVersion: 2
         x: 20
@@ -1463,7 +1681,11 @@ TextureImporter:
       pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
-      physicsShape: []
+      physicsShape:
+      - - {x: -1, y: -1}
+        - {x: -1, y: -4}
+        - {x: 1, y: -4}
+        - {x: 1, y: -1}
       tessellationDetail: 0
       bones: []
       spriteID: 2e224662b29c3d710800000000000000
@@ -1473,7 +1695,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: TilesSheet_54
+      name: Platform_7
       rect:
         serializedVersion: 2
         x: 24
@@ -1484,7 +1706,11 @@ TextureImporter:
       pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
-      physicsShape: []
+      physicsShape:
+      - - {x: -1, y: -2}
+        - {x: -1, y: -4}
+        - {x: 1, y: -4}
+        - {x: 1, y: -2}
       tessellationDetail: 0
       bones: []
       spriteID: cecee536f1b119860800000000000000
@@ -1494,7 +1720,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: TilesSheet_55
+      name: Platform_8
       rect:
         serializedVersion: 2
         x: 28
@@ -1505,7 +1731,11 @@ TextureImporter:
       pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
-      physicsShape: []
+      physicsShape:
+      - - {x: -1, y: -4}
+        - {x: 1, y: -4}
+        - {x: 1, y: -3}
+        - {x: -1, y: -3}
       tessellationDetail: 0
       bones: []
       spriteID: 9f6f58915b45d8740800000000000000
@@ -1515,7 +1745,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: TilesSheet_56
+      name: coins_1
       rect:
         serializedVersion: 2
         x: 32
@@ -1526,7 +1756,11 @@ TextureImporter:
       pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
-      physicsShape: []
+      physicsShape:
+      - - {x: -2, y: -2}
+        - {x: 2, y: -2}
+        - {x: 2, y: 2}
+        - {x: -2, y: 2}
       tessellationDetail: 0
       bones: []
       spriteID: a3efbd693cb76d550800000000000000
@@ -1536,7 +1770,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: TilesSheet_57
+      name: coins_2
       rect:
         serializedVersion: 2
         x: 36
@@ -1547,7 +1781,11 @@ TextureImporter:
       pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
-      physicsShape: []
+      physicsShape:
+      - - {x: -1, y: 2}
+        - {x: -1, y: -2}
+        - {x: 1, y: -2}
+        - {x: 1, y: 2}
       tessellationDetail: 0
       bones: []
       spriteID: e1f3c0a94fa655be0800000000000000
@@ -1557,7 +1795,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: TilesSheet_58
+      name: coins_3
       rect:
         serializedVersion: 2
         x: 40
@@ -1568,7 +1806,11 @@ TextureImporter:
       pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
-      physicsShape: []
+      physicsShape:
+      - - {x: -2, y: -1}
+        - {x: 2, y: -1}
+        - {x: 2, y: 1}
+        - {x: -2, y: 1}
       tessellationDetail: 0
       bones: []
       spriteID: 157f0b83870d76d40800000000000000
@@ -1578,7 +1820,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: TilesSheet_59
+      name: coins_4
       rect:
         serializedVersion: 2
         x: 44
@@ -1589,7 +1831,11 @@ TextureImporter:
       pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
-      physicsShape: []
+      physicsShape:
+      - - {x: -1, y: 1}
+        - {x: -1, y: -1}
+        - {x: 1, y: -1}
+        - {x: 1, y: 1}
       tessellationDetail: 0
       bones: []
       spriteID: 5d059cef04cdce5d0800000000000000
@@ -1599,7 +1845,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: TilesSheet_60
+      name: Platform_9
       rect:
         serializedVersion: 2
         x: 0
@@ -1610,7 +1856,11 @@ TextureImporter:
       pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
-      physicsShape: []
+      physicsShape:
+      - - {x: -1, y: 4}
+        - {x: -1, y: 3}
+        - {x: 1, y: 3}
+        - {x: 1, y: 4}
       tessellationDetail: 0
       bones: []
       spriteID: 5dfcbac75be422450800000000000000
@@ -1620,7 +1870,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: TilesSheet_61
+      name: Platform_10
       rect:
         serializedVersion: 2
         x: 4
@@ -1631,7 +1881,11 @@ TextureImporter:
       pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
-      physicsShape: []
+      physicsShape:
+      - - {x: -1, y: 4}
+        - {x: -1, y: 2}
+        - {x: 1, y: 2}
+        - {x: 1, y: 4}
       tessellationDetail: 0
       bones: []
       spriteID: 720e37591c4dc4070800000000000000
@@ -1641,7 +1895,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: TilesSheet_62
+      name: Platform_11
       rect:
         serializedVersion: 2
         x: 8
@@ -1652,7 +1906,11 @@ TextureImporter:
       pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
-      physicsShape: []
+      physicsShape:
+      - - {x: -1, y: 4}
+        - {x: -1, y: 1}
+        - {x: 1, y: 1}
+        - {x: 1, y: 4}
       tessellationDetail: 0
       bones: []
       spriteID: 21b6fcfcbe07d9230800000000000000
@@ -1662,7 +1920,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: TilesSheet_63
+      name: Platform_12
       rect:
         serializedVersion: 2
         x: 12
@@ -1673,7 +1931,11 @@ TextureImporter:
       pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
-      physicsShape: []
+      physicsShape:
+      - - {x: -1, y: 4}
+        - {x: -1, y: 0}
+        - {x: 1, y: 0}
+        - {x: 1, y: 4}
       tessellationDetail: 0
       bones: []
       spriteID: 949e8f2fb205af5b0800000000000000
@@ -1683,7 +1945,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: TilesSheet_64
+      name: Platform_13
       rect:
         serializedVersion: 2
         x: 16
@@ -1694,7 +1956,11 @@ TextureImporter:
       pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
-      physicsShape: []
+      physicsShape:
+      - - {x: -1, y: 4}
+        - {x: -1, y: -1}
+        - {x: 1, y: -1}
+        - {x: 1, y: 4}
       tessellationDetail: 0
       bones: []
       spriteID: 6073d77e8bee33c10800000000000000
@@ -1704,7 +1970,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: TilesSheet_65
+      name: Platform_14
       rect:
         serializedVersion: 2
         x: 20
@@ -1715,7 +1981,11 @@ TextureImporter:
       pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
-      physicsShape: []
+      physicsShape:
+      - - {x: -1, y: 4}
+        - {x: -1, y: -2}
+        - {x: 1, y: -2}
+        - {x: 1, y: 4}
       tessellationDetail: 0
       bones: []
       spriteID: 6b145125a985146e0800000000000000
@@ -1725,7 +1995,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: TilesSheet_66
+      name: Platform_15
       rect:
         serializedVersion: 2
         x: 24
@@ -1736,7 +2006,11 @@ TextureImporter:
       pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
-      physicsShape: []
+      physicsShape:
+      - - {x: -1, y: 4}
+        - {x: -1, y: -3}
+        - {x: 1, y: -3}
+        - {x: 1, y: 4}
       tessellationDetail: 0
       bones: []
       spriteID: fa06cf45dbd7e9a90800000000000000
@@ -1746,7 +2020,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: TilesSheet_67
+      name: Platform_16
       rect:
         serializedVersion: 2
         x: 28
@@ -1757,7 +2031,11 @@ TextureImporter:
       pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
-      physicsShape: []
+      physicsShape:
+      - - {x: -2, y: 4}
+        - {x: -2, y: -4}
+        - {x: 2, y: -4}
+        - {x: 2, y: 4}
       tessellationDetail: 0
       bones: []
       spriteID: ddfc9e0cd29388e40800000000000000
@@ -1767,7 +2045,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: TilesSheet_68
+      name: Platform_17
       rect:
         serializedVersion: 2
         x: 32
@@ -1778,7 +2056,11 @@ TextureImporter:
       pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
-      physicsShape: []
+      physicsShape:
+      - - {x: -2, y: 1}
+        - {x: -2, y: -4}
+        - {x: 2, y: -4}
+        - {x: 2, y: 1}
       tessellationDetail: 0
       bones: []
       spriteID: 69403b3d997cf48c0800000000000000
@@ -1788,7 +2070,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: TilesSheet_69
+      name: Platform_18
       rect:
         serializedVersion: 2
         x: 36
@@ -1799,7 +2081,11 @@ TextureImporter:
       pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
-      physicsShape: []
+      physicsShape:
+      - - {x: -2, y: 4}
+        - {x: -2, y: -2}
+        - {x: 2, y: -2}
+        - {x: 2, y: 4}
       tessellationDetail: 0
       bones: []
       spriteID: ed492ca3ba8ff20d0800000000000000
@@ -1809,7 +2095,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: TilesSheet_70
+      name: Platform_19
       rect:
         serializedVersion: 2
         x: 40
@@ -1820,7 +2106,11 @@ TextureImporter:
       pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
-      physicsShape: []
+      physicsShape:
+      - - {x: -2, y: -1}
+        - {x: -2, y: -4}
+        - {x: 2, y: -4}
+        - {x: 2, y: -1}
       tessellationDetail: 0
       bones: []
       spriteID: c8c2a8a12067aa140800000000000000
@@ -1830,7 +2120,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: TilesSheet_71
+      name: Platform_20
       rect:
         serializedVersion: 2
         x: 44
@@ -1841,11 +2131,57 @@ TextureImporter:
       pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
-      physicsShape: []
+      physicsShape:
+      - - {x: -2, y: 4}
+        - {x: -2, y: 1}
+        - {x: 2, y: 1}
+        - {x: 2, y: 4}
       tessellationDetail: 0
       bones: []
       spriteID: 68dcaa50d8fb2b6f0800000000000000
       internalID: -670262782118408826
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TilesSheetMain_0
+      rect:
+        serializedVersion: 2
+        x: 47
+        y: 17
+        width: 1
+        height: 1
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 719b9509740817d20800000000000000
+      internalID: 3274539448927893783
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TilesSheetMain_1
+      rect:
+        serializedVersion: 2
+        x: 45
+        y: 17
+        width: 3
+        height: 1
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a006c7f53962b9de0800000000000000
+      internalID: -1325423250926444534
       vertices: []
       indices: 
       edges: []
