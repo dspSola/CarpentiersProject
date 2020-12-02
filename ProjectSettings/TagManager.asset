@@ -16,8 +16,8 @@ TagManager:
   - Player
   - Collision
   - Note
-  - 
-  - 
+  - DetectNote
+  - DeathZone
   - 
   - 
   - 

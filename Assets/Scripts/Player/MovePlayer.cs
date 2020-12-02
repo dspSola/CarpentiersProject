@@ -12,6 +12,8 @@ public class MovePlayer : MonoBehaviour
 
     [SerializeField] private Transform _worldParrent;
 
+    [SerializeField] private List<RayCastFloor> _rayCastFloors;
+
     private void Update()
     {
         if (Input.GetAxisRaw("Horizontal") != 0)
@@ -33,7 +35,7 @@ public class MovePlayer : MonoBehaviour
             _pressJump = false;
         }
 
-        if(_isGrounded || _isInJump)
+        if (_isGrounded || _isInJump)
         {
             _timeFall = 0;
         }
@@ -41,12 +43,11 @@ public class MovePlayer : MonoBehaviour
         {
             _timeFall += Time.deltaTime * _coefTimeFall;
         }
-
-        transform.position = new Vector2(Mathf.Round(transform.position.x * 100.0f) / 100.0f, Mathf.Round(transform.position.y * 100.0f) / 100.0f);
     }
 
     private void FixedUpdate()
     {
+        AllRayCastFloors();
         //RayCastTouchFloor();
         Fall();
         Jump();
@@ -55,39 +56,51 @@ public class MovePlayer : MonoBehaviour
 
     private void Fall()
     {
-        if(!_isGrounded)
+        if (!_isGrounded && !_enterGround)
         {
             _velocity.y = Physics2D.gravity.y * _timeFall;
             Mathf.Clamp(_velocity.y, -10, 10);
         }
     }
 
-    private void OnTriggerEnter2D(Collider2D collision)
+    private void OnCollisionEnter2D(Collision2D collision)
     {
         Debug.Log("ZIZI");
-        if(collision.gameObject.layer == 9)
+        if (collision.gameObject.layer == 9)
         {
             Debug.Log("ZI2ZI2");
 
-            _isGrounded = true;
-            if (!_enterGround)
-            {
-                _velocity.y = 0;
-                _enterGround = true;
-            }
-
-            transform.SetParent(collision.gameObject.transform);
+            //transform.SetParent(collision.gameObject.transform);
+            transform.parent = collision.transform;
         }
+
+        //_isGrounded = true;
+        //if (!_enterGround)
+        //{
+        //    _velocity.y = 0;
+        //    _enterGround = true;
+        //}
+    }
+
+    private void OnCollisionExit2D(Collision2D collision)
+    {
+        if (collision.gameObject.layer == 9)
+        {
+            //_isGrounded = false;
+            //_enterGround = false;
+            //transform.SetParent(null);
+            transform.parent = null;
+        }
+    }
+
+    private void OnTriggerEnter2D(Collider2D collision)
+    {
+
     }
 
     private void OnTriggerExit2D(Collider2D collision)
     {
-        if (collision.gameObject.layer == 9)
-        {
-            _isGrounded = false;
-            _enterGround = false;
-            transform.SetParent(null);
-        }
+
     }
 
     private void Jump()
@@ -98,9 +111,9 @@ public class MovePlayer : MonoBehaviour
             //_rigidbody2D.AddForce( new Vector2(0, _forceJump), ForceMode2D.Force);
         }
 
-        if(_isInJump && _pressJump)
+        if (_isInJump && _pressJump)
         {
-            if(_timeInJump < _timeInJumpMax)
+            if (_timeInJump < _timeInJumpMax)
             {
                 _timeInJump += Time.deltaTime;
                 _rigidbody2D.AddForce(new Vector2(0, _forceJump - _timeInJump / 100), ForceMode2D.Force);
@@ -129,13 +142,17 @@ public class MovePlayer : MonoBehaviour
             // Calculate the distance from the surface and the "error" relative
             // to the floating height.
             float distance = Mathf.Abs(hit.point.y - transform.position.y);
-            //Debug.Log("Distance = " + distance);
+            Debug.Log("Distance = " + distance);
             Debug.DrawRay(transform.position, Vector2.down * distance, Color.red);
 
-            if (distance < 0.02f)
+            if (distance < 0.01f)
             {
+                //if(_velocity.y < 0)
+                //{
+                //    _velocity.y += Time.deltaTime;
+                //}
                 _isGrounded = true;
-                if(!_enterGround)
+                if (!_enterGround)
                 {
                     _velocity.y = 0;
                     _enterGround = true;
@@ -152,6 +169,41 @@ public class MovePlayer : MonoBehaviour
             _isGrounded = false;
             _enterGround = false;
             Debug.DrawRay(transform.position, Vector2.down * _lengt, Color.red);
+        }
+    }
+
+    private void AllRayCastFloors()
+    {
+        if (!_isInJump)
+        {
+            bool oneTouchFloor = false;
+            for (int i = 0; i < _rayCastFloors.Count; i++)
+            {
+                if (_rayCastFloors[i].RayCastTouchFloor())
+                {
+                    oneTouchFloor = true;
+                }
+
+                if (oneTouchFloor)
+                {
+                    _isGrounded = true;
+                    if (!_enterGround)
+                    {
+                        _velocity.y = 0;
+                        _enterGround = true;
+                    }
+                }
+                else
+                {
+                    _isGrounded = false;
+                    _enterGround = false;
+                }
+            }
+        }
+        else
+        {
+            _isGrounded = false;
+            _enterGround = false;
         }
     }
 }

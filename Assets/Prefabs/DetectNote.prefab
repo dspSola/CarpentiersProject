@@ -12,7 +12,7 @@ GameObject:
   - component: {fileID: 6199993337086532826}
   - component: {fileID: 6199993337086532829}
   - component: {fileID: 6199993337086532827}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: DetectNote
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -122,5 +122,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6f9646eb6c0dcda46b282addc832d7af, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _spriteRenderer: {fileID: 0}
   _firstPlatform: {fileID: 0}
   _firstNotePassed: 0
