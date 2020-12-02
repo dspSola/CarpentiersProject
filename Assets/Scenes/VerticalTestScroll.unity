@@ -2088,8 +2088,8 @@ MonoBehaviour:
   _initializeDetectZone: {fileID: 255707143}
   _toUp: 0
   _toDown: 0
-  _toRight: 1
-  _toLeft: 0
+  _toRight: 0
+  _toLeft: 1
   _setRandomSpriteAllFragment: 0
   _setRandomRotationAllFragment: 0
   _startTopPos: {fileID: 452417464}
