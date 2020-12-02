@@ -11,8 +11,9 @@ public class MovePlayer : MonoBehaviour
     [SerializeField] private bool _isGrounded, _enterGround, _pressJump, _isInJump;
 
     [SerializeField] private Transform _worldParrent;
-
     [SerializeField] private List<RayCastFloor> _rayCastFloors;
+
+    [SerializeField] private bool _debugOnGui;
 
     private void Update()
     {
@@ -72,23 +73,18 @@ public class MovePlayer : MonoBehaviour
 
             //transform.SetParent(collision.gameObject.transform);
             transform.parent = collision.transform;
-        }
 
-        //_isGrounded = true;
-        //if (!_enterGround)
-        //{
-        //    _velocity.y = 0;
-        //    _enterGround = true;
-        //}
+            if (_isInJump)
+            {
+                EndJump();
+            }
+        }
     }
 
     private void OnCollisionExit2D(Collision2D collision)
     {
         if (collision.gameObject.layer == 9)
         {
-            //_isGrounded = false;
-            //_enterGround = false;
-            //transform.SetParent(null);
             transform.parent = null;
         }
     }
@@ -108,7 +104,6 @@ public class MovePlayer : MonoBehaviour
         if (_isGrounded && _pressJump)
         {
             _isInJump = true;
-            //_rigidbody2D.AddForce( new Vector2(0, _forceJump), ForceMode2D.Force);
         }
 
         if (_isInJump && _pressJump)
@@ -120,15 +115,19 @@ public class MovePlayer : MonoBehaviour
             }
             else
             {
-                _timeInJump = 0;
-                _isInJump = false;
+                EndJump();
             }
         }
         else
         {
-            _timeInJump = 0;
-            _isInJump = false;
+            EndJump();
         }
+    }
+
+    private void EndJump()
+    {
+        _timeInJump = 0;
+        _isInJump = false;
     }
 
     private void RayCastTouchFloor()
@@ -147,10 +146,6 @@ public class MovePlayer : MonoBehaviour
 
             if (distance < 0.01f)
             {
-                //if(_velocity.y < 0)
-                //{
-                //    _velocity.y += Time.deltaTime;
-                //}
                 _isGrounded = true;
                 if (!_enterGround)
                 {
@@ -204,6 +199,16 @@ public class MovePlayer : MonoBehaviour
         {
             _isGrounded = false;
             _enterGround = false;
+        }
+    }
+
+    private void OnGUI()
+    {
+        if (_debugOnGui)
+        {
+            GUI.Box(new Rect(Screen.width + 0.2f, Screen.height + 0.2f, 50, 20), "Press Jump" + _pressJump);
+            GUI.Box(new Rect(Screen.width - 0.2f, Screen.height - 0.2f, 50, 20), "IsInJump" + _isInJump);
+            GUI.Box(new Rect(0, 0, Screen.width, Screen.height), "This is a box");
         }
     }
 }
