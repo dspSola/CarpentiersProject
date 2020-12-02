@@ -121,6 +121,36 @@ NavMeshSettings:
     debug:
       m_Flags: 0
   m_NavMeshData: {fileID: 0}
+--- !u!1 &412673880
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 412673881}
+  m_Layer: 0
+  m_Name: WorldParrent
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &412673881
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 412673880}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &449171853
 GameObject:
   m_ObjectHideFlags: 0
@@ -148,12 +178,12 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 449171853}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0.1885, z: 0}
+  m_LocalPosition: {x: 0.11, y: 0.815, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 491007614}
   m_Father: {fileID: 0}
-  m_RootOrder: 0
+  m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!50 &449171855
 Rigidbody2D:
@@ -185,7 +215,7 @@ BoxCollider2D:
   m_GameObject: {fileID: 449171853}
   m_Enabled: 1
   m_Density: 1
-  m_Material: {fileID: 0}
+  m_Material: {fileID: 6200000, guid: 637a6be09b7ee914985373424cb5ae2a, type: 2}
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
@@ -216,16 +246,21 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _rigidbody2D: {fileID: 449171855}
   _velocity: {x: 0, y: 0}
+  _speed: 0.25
   _lengt: 10
   _coefTimeFall: 0.25
   _timeFall: 0
   _forceJump: 0.01
+  _timeInJump: 0
+  _timeInJumpMax: 0.5
   _layerMask:
     serializedVersion: 2
     m_Bits: 512
   _isGrounded: 0
-  _pressJump: 0
   _enterGround: 0
+  _pressJump: 0
+  _isInJump: 0
+  _worldParrent: {fileID: 412673881}
 --- !u!1 &491007613
 GameObject:
   m_ObjectHideFlags: 0
