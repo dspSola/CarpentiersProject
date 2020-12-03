@@ -72,13 +72,13 @@ public class NewMovePlayer : MonoBehaviour
     }
     public void ExitFalling()
     {
-
+        _velocity.y = 0;
     }
 
     // Ground
     public void EnterGrounded()
     {
-        //_velocity.y = 0;
+        _velocity.y = 0;
     }
 
     public void ExitGrounded()
