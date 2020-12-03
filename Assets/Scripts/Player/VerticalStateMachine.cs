@@ -11,6 +11,11 @@ public enum PlayerVerticalState
 
 public class VerticalStateMachine : MonoBehaviour
 {
+    public GUIStyle myStyle;
+
+    [SerializeField] private NewMovePlayer _movePlayer;
+    [SerializeField] private OverLapFloor _overLapFloor;
+    [SerializeField] private bool _debugOnGui;
     public PlayerVerticalState CurrentState
     {
         get
@@ -22,6 +27,7 @@ public class VerticalStateMachine : MonoBehaviour
     private void Start()
     {
         TransitionToState(_currentState, PlayerVerticalState.FALLING);
+        //myStyle.fontSize = (int)(8.0f * (float)(Screen.width) / 96.0f);
     }
 
     private void Update()
@@ -112,91 +118,77 @@ public class VerticalStateMachine : MonoBehaviour
         TransitionToState(_currentState, toState);
     }
 
-#endregion
-
-
-    #region State Grounded
-
+    // Ground
     private void DoGroundedEnter()
     {
-        _bruteAnimatorController.SetGrounded(true);
-        _timeToJump = 0;
+        Debug.Log("DoGroundedEnter");
+        _movePlayer.EnterGrounded();
     }
-
-    private void DoGroundedExit()
-    {
-        _bruteAnimatorController.SetGrounded(false);
-    }
-
     private void DoGroundedUpdate()
     {
-        if (!_groundCheck.TestCollision())
-        {
-            TransitionToState(PlayerVerticalState.FALLING);
-            return;
-        }
-
-        if (_timeToJump < _timeToJumpMax)
-        {
-            _timeToJump += Time.deltaTime;
-        }
-        else if (_getBruteInput.JumpInput.IsActive && !_stateMachineAttack.IsAnim && !_getBruteInput.Attack01Input.IsActive)
+        if(_movePlayer.PressJump)
         {
             TransitionToState(PlayerVerticalState.JUMPING);
             return;
         }
-    }
 
-    #endregion
-
-
-    #region State Jumping
-
-    private void DoJumpingEnter()
-    {
-        _playerMove.DoJump();
-        _bruteAnimatorController.SetJumping(true);
-    }
-
-    private void DoJumpingExit()
-    {
-        _bruteAnimatorController.SetJumping(false);
-    }
-
-    private void DoJumpingUpdate()
-    {
-        if (_playerMove.VelocityRb.y < -0.0000001f)
+        if (!_overLapFloor.TestCollision())
         {
             TransitionToState(PlayerVerticalState.FALLING);
             return;
         }
     }
+    private void DoGroundedExit()
+    {
 
-    #endregion
+    }
 
+    // Jump
+    private void DoJumpingEnter()
+    {
+        _movePlayer.EnterJump();
+    }
+    private void DoJumpingUpdate()
+    {
+        if(!_movePlayer.IsInJump)
+        {
+            TransitionToState(PlayerVerticalState.FALLING);
+            return;
+        }
+    }
+    private void DoJumpingExit()
+    {
 
-    #region State Falling
+    }
 
+    // Fall
     private void DoFallingEnter()
     {
-        _bruteAnimatorController.SetFalling(true);
+        Debug.Log("DoFallingEnter");
+        _movePlayer.EnterFalling();
     }
-
-    private void DoFallingExit()
-    {
-        _bruteAnimatorController.SetFalling(false);
-    }
-
     private void DoFallingUpdate()
     {
-        if (_groundCheck.TestCollision())
+        Debug.Log("DoFallingUpdate");
+
+        if(_overLapFloor.TestCollision())
         {
             TransitionToState(PlayerVerticalState.GROUNDED);
             return;
         }
     }
+    private void DoFallingExit()
+    {
 
-    #endregion
+    }
 
     private PlayerVerticalState _currentState;
+
+    private void OnGUI()
+    {    
+        if (_debugOnGui)
+        {
+            GUI.Box(new Rect(0, 0 - Screen.height * 0.0625f, Screen.width, Screen.height * 0.25f), _currentState.ToString(), myStyle);
+        }
+    }
 }

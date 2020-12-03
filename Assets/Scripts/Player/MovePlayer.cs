@@ -55,15 +55,6 @@ public class MovePlayer : MonoBehaviour
         _rigidbody2D.velocity = _velocity;
     }
 
-    private void Fall()
-    {
-        if (!_isGrounded && !_enterGround)
-        {
-            _velocity.y = Physics2D.gravity.y * _timeFall;
-            Mathf.Clamp(_velocity.y, -10, 10);
-        }
-    }
-
     private void OnCollisionEnter2D(Collision2D collision)
     {
         Debug.Log("ZIZI");
@@ -128,6 +119,15 @@ public class MovePlayer : MonoBehaviour
     {
         _timeInJump = 0;
         _isInJump = false;
+    }
+
+    private void Fall()
+    {
+        if (!_isGrounded && !_enterGround)
+        {
+            _velocity.y = Physics2D.gravity.y * _timeFall;
+            Mathf.Clamp(_velocity.y, -10, 10);
+        }
     }
 
     private void RayCastTouchFloor()
