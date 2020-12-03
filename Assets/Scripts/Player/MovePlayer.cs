@@ -55,15 +55,6 @@ public class MovePlayer : MonoBehaviour
         _rigidbody2D.velocity = _velocity;
     }
 
-    private void Fall()
-    {
-        if (!_isGrounded && !_enterGround)
-        {
-            _velocity.y = Physics2D.gravity.y * _timeFall;
-            Mathf.Clamp(_velocity.y, -10, 10);
-        }
-    }
-
     private void OnCollisionEnter2D(Collision2D collision)
     {
         Debug.Log("ZIZI");
@@ -128,6 +119,15 @@ public class MovePlayer : MonoBehaviour
     {
         _timeInJump = 0;
         _isInJump = false;
+    }
+
+    private void Fall()
+    {
+        if (!_isGrounded && !_enterGround)
+        {
+            _velocity.y = Physics2D.gravity.y * _timeFall;
+            Mathf.Clamp(_velocity.y, -10, 10);
+        }
     }
 
     private void RayCastTouchFloor()
@@ -206,9 +206,8 @@ public class MovePlayer : MonoBehaviour
     {
         if (_debugOnGui)
         {
-            GUI.Box(new Rect(Screen.width + 0.2f, Screen.height + 0.2f, 50, 20), "Press Jump" + _pressJump);
-            GUI.Box(new Rect(Screen.width - 0.2f, Screen.height - 0.2f, 50, 20), "IsInJump" + _isInJump);
-            GUI.Box(new Rect(0, 0, Screen.width, Screen.height), "This is a box");
+            GUI.Box(new Rect(0, 0, Screen.width * 0.5f, Screen.height * 0.25f), _pressJump.ToString());
+            GUI.Box(new Rect(0 + Screen.width * 0.5f, 0, Screen.width * 0.5f, Screen.height * 0.25f), _isInJump.ToString());
         }
     }
 }
