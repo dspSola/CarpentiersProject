@@ -4,41 +4,48 @@ using UnityEngine;
 
 public class Partition : MonoBehaviour
 {
-    [SerializeField] private float _speed, _coefSpeed, _time, _time1d, _time2d;
-    [SerializeField] private bool _use1D, _use2D;
+    [SerializeField] private float _speed;
+    [SerializeField] private List<FragmentPartition> _fragmentPartitions;
+
+    private void Start()
+    {
+
+    }
 
     private void Update()
     {
-        transform.position -= Vector3.up * Time.deltaTime * _speed;
+
     }
 
-    private void ShitFonction()
+    public void InitializePartition(Transform _posStart)
     {
-        _time += Time.deltaTime;
+        transform.position = _posStart.position;
+    }
 
-        _time1d = Mathf.Round(_time * 10.0f) / 10.0f;
-        _time2d = Mathf.Round(_time * 100.0f) / 100.0f;
-        if (_use1D && !_use2D)
+    public void InitializePartition(Transform _posStart, float rotation)
+    {
+        transform.position = _posStart.position;
+        transform.rotation = Quaternion.Euler(new Vector3(0, 0, rotation));
+    }
+
+    public void SetRandomSpriteAllFragment()
+    {
+        foreach (FragmentPartition fp in _fragmentPartitions)
         {
-            if (_time1d % _coefSpeed == 0)
-            {
-                transform.position -= new Vector3(0, 0.01f);
-            }
+            fp.SetRandomSprite();
         }
-        else if (!_use1D && _use2D)
+    }
+
+    public void SetRandomRotationAllFragment()
+    {
+        foreach (FragmentPartition fp in _fragmentPartitions)
         {
-            if (_time2d % _coefSpeed == 0)
-            {
-                transform.position -= new Vector3(0, 0.01f);
-            }
+            fp.SetRandomRotation();
         }
-        else if (!_use1D && !_use2D)
-        {
-            Debug.Log("Tu as coché aucun bool, faudrait bien que tu changes de main");
-        }
-        else
-        {
-            Debug.Log("Tu as coché les deux bool sale boloss c'est pas bien de tromper");
-        }
+    }
+
+    public void MovePartition(Vector3 direction)
+    {
+        transform.position += direction * Time.deltaTime * _speed;
     }
 }
