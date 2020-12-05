@@ -236,10 +236,13 @@ public class VerticalStateMachine : MonoBehaviour
     }
     private void ToClimbing()
     {
-        if(_rayCastDetectionLeft.MinDistanceHit < 0.015f || _rayCastDetectionRight.MinDistanceHit < 0.015f)
+        if(_rayCastDetectionLeft.IfOnOfRayCastTouch || _rayCastDetectionRight.IfOnOfRayCastTouch)
         {
-            TransitionToState(PlayerVerticalState.CLIMBING);
-            return;
+            if (_rayCastDetectionLeft.MinDistanceHit < 0.015f || _rayCastDetectionRight.MinDistanceHit < 0.015f)
+            {
+                TransitionToState(PlayerVerticalState.CLIMBING);
+                return;
+            }
         }
     }
     private void ToFalling()
