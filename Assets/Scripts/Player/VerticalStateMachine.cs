@@ -6,6 +6,7 @@ public enum PlayerVerticalState
 {
     GROUNDED,
     JUMPING,
+    CLIMBING,
     FALLING,
 }
 
@@ -14,6 +15,7 @@ public class VerticalStateMachine : MonoBehaviour
     public GUIStyle myStyle;
 
     [SerializeField] private NewMovePlayer _movePlayer;
+    [SerializeField] private RayCastDetection _rayCastDetectionUp, _rayCastDetectionRight, _rayCastDetectionDown, _rayCastDetectionLeft;
     [SerializeField] private OverLapFloor _overLapFloor;
     [SerializeField] private bool _debugOnGui;
     public PlayerVerticalState CurrentState
@@ -51,6 +53,9 @@ public class VerticalStateMachine : MonoBehaviour
             case PlayerVerticalState.JUMPING:
                 DoJumpingEnter();
                 break;
+            case PlayerVerticalState.CLIMBING:
+                DoClimbingEnter();
+                break;
 
             case PlayerVerticalState.FALLING:
                 DoFallingEnter();
@@ -73,6 +78,9 @@ public class VerticalStateMachine : MonoBehaviour
             case PlayerVerticalState.JUMPING:
                 DoJumpingExit();
                 break;
+            case PlayerVerticalState.CLIMBING:
+                DoClimbingExit();
+                break;
 
             case PlayerVerticalState.FALLING:
                 DoFallingExit();
@@ -94,6 +102,10 @@ public class VerticalStateMachine : MonoBehaviour
 
             case PlayerVerticalState.JUMPING:
                 DoJumpingUpdate();
+                break;
+
+            case PlayerVerticalState.CLIMBING:
+                DoClimbingUpdate();
                 break;
 
             case PlayerVerticalState.FALLING:
@@ -126,17 +138,13 @@ public class VerticalStateMachine : MonoBehaviour
     }
     private void DoGroundedUpdate()
     {
-        if(_movePlayer.PressJump)
-        {
-            TransitionToState(PlayerVerticalState.JUMPING);
-            return;
-        }
-
-        if (!_overLapFloor.TestCollision())
-        {
-            TransitionToState(PlayerVerticalState.FALLING);
-            return;
-        }
+        //if (!_overLapFloor.TestCollision())
+        //{
+        //    TransitionToState(PlayerVerticalState.FALLING);
+        //    return;
+        //}
+        ToJumping();
+        ToFalling();
     }
     private void DoGroundedExit()
     {
@@ -150,13 +158,25 @@ public class VerticalStateMachine : MonoBehaviour
     }
     private void DoJumpingUpdate()
     {
-        if(!_movePlayer.IsInJump)
-        {
-            TransitionToState(PlayerVerticalState.FALLING);
-            return;
-        }
+        ToFalling();
+        ToClimbing();
     }
     private void DoJumpingExit()
+    {
+
+    }
+
+    // Climb
+    private void DoClimbingEnter()
+    {
+
+    }
+    private void DoClimbingUpdate()
+    {
+        ToGrounded();
+        ToJumping();
+    }
+    private void DoClimbingExit()
     {
 
     }
@@ -171,15 +191,17 @@ public class VerticalStateMachine : MonoBehaviour
     {
         Debug.Log("DoFallingUpdate");
 
-        if(_overLapFloor.TestCollision())
-        {
-            TransitionToState(PlayerVerticalState.GROUNDED);
-            return;
-        }
+        //if(_overLapFloor.TestCollision())
+        //{
+        //    TransitionToState(PlayerVerticalState.GROUNDED);
+        //    return;
+        //}
+        ToClimbing();
+        ToGrounded();
     }
     private void DoFallingExit()
     {
-
+        _movePlayer.ExitFalling();
     }
 
     private PlayerVerticalState _currentState;
@@ -191,4 +213,42 @@ public class VerticalStateMachine : MonoBehaviour
             GUI.Box(new Rect(0, 0 - Screen.height * 0.0625f, Screen.width, Screen.height * 0.25f), _currentState.ToString(), myStyle);
         }
     }
+
+    private void ToGrounded()
+    {
+        if (_rayCastDetectionDown.IfOnOfRayCastTouch)
+        {
+            //_movePlayer.RalentitChute();
+            if (_rayCastDetectionDown.MinDistanceHit < 0.001f)
+            {
+                TransitionToState(PlayerVerticalState.GROUNDED);
+                return;
+            }
+        }
+    }
+    private void ToJumping()
+    {
+        if (_movePlayer.PressJump)
+        {
+            TransitionToState(PlayerVerticalState.JUMPING);
+            return;
+        }
+    }
+    private void ToClimbing()
+    {
+        if(_rayCastDetectionLeft.MinDistanceHit < 0.015f || _rayCastDetectionRight.MinDistanceHit < 0.015f)
+        {
+            TransitionToState(PlayerVerticalState.CLIMBING);
+            return;
+        }
+    }
+    private void ToFalling()
+    {
+        if (!_rayCastDetectionDown.IfOnOfRayCastTouch)
+        {
+            TransitionToState(PlayerVerticalState.FALLING);
+            return;
+        }
+    }
+
 }

@@ -7,6 +7,7 @@ public class NewMovePlayer : MonoBehaviour
     [SerializeField] private HorizontalStateMachine _horizontalStateMachine;
     [SerializeField] private VerticalStateMachine _verticalStateMachine;
     [SerializeField] private NewRayCastFloorManager _rayCastFloorManager;
+    [SerializeField] private RayCastDetection _rayCastDetectionFloor;
     [SerializeField] private Transform _parentPlayerTr;
     [SerializeField] private Rigidbody2D _rigidBody2D;
     [SerializeField] private float _inputHorizontal;
@@ -36,9 +37,13 @@ public class NewMovePlayer : MonoBehaviour
         {
             Jump();
         }
+        if (_verticalStateMachine.CurrentState == PlayerVerticalState.CLIMBING)
+        {
+            Climb();
+        }
         if (_verticalStateMachine.CurrentState == PlayerVerticalState.GROUNDED)
         {
-            StickToGround();
+            //StickToGround();
         }
 
         _rigidBody2D.velocity = _velocity;
@@ -67,7 +72,16 @@ public class NewMovePlayer : MonoBehaviour
     public void Falling()
     {
         _timeToFall += Time.deltaTime;
-        _velocity.y = Physics2D.gravity.y * _timeToFall * _coefGravity;
+
+        if(_rayCastDetectionFloor.MinDistanceHit < 0.015f)
+        {
+            //RalentitChute();
+            _velocity.y = Physics2D.gravity.y * _rayCastDetectionFloor.MinDistanceHit;
+        }
+        else
+        {
+            _velocity.y = Physics2D.gravity.y * _timeToFall * _coefGravity;
+        }
         Mathf.Clamp(_velocity.y, -_maxVelocityY, _maxVelocityY);
     }
     public void ExitFalling()
@@ -80,10 +94,49 @@ public class NewMovePlayer : MonoBehaviour
     {
         _velocity.y = 0;
     }
-
     public void ExitGrounded()
     {
 
+    }
+
+    // Jump
+    public void EnterJump()
+    {
+        _timeToFall = 0;
+        _isInJump = true;
+    }
+    public void Jump()
+    {
+        if (_pressJump)
+        {
+            if (_timeInJump < _timeInJumpMax)
+            {
+                _timeInJump += Time.deltaTime;
+                //_rigidBody2D.AddForce(new Vector2(0, _forceJump - (_timeInJump / 100)), ForceMode2D.Force);
+                _rigidBody2D.AddForce(new Vector2(0, _forceJump), ForceMode2D.Force);
+            }
+            else
+            {
+                ExitJump();
+            }
+        }
+        else
+        {
+            ExitJump();
+        }
+    }
+    public void ExitJump()
+    {
+        _timeInJump = 0;
+        _isInJump = false;
+    }
+
+    // Climb
+    private void Climb()
+    {
+        _timeToFall += Time.deltaTime;
+        _velocity.y = (Physics2D.gravity.y / 2f) * _timeToFall * _coefGravity;
+        Mathf.Clamp(_velocity.y, -_maxVelocityY, _maxVelocityY);
     }
 
     private void StickToGround()
@@ -114,38 +167,9 @@ public class NewMovePlayer : MonoBehaviour
         //}
     }
 
-    // Jump
-    public void EnterJump()
+    public void RalentitChute()
     {
-        _timeToFall = 0;
-        _isInJump = true;
-    }
-
-    public void Jump()
-    {
-        if (_pressJump)
-        {
-            if (_timeInJump < _timeInJumpMax)
-            {
-                _timeInJump += Time.deltaTime;
-                //_rigidBody2D.AddForce(new Vector2(0, _forceJump - (_timeInJump / 100)), ForceMode2D.Force);
-                _rigidBody2D.AddForce(new Vector2(0, _forceJump), ForceMode2D.Force);
-            }
-            else
-            {
-                ExitJump();
-            }
-        }
-        else
-        {
-            ExitJump();
-        }
-    }
-
-    public void ExitJump()
-    {
-        _timeInJump = 0;
-        _isInJump = false;
+        _velocity.y *= _rayCastDetectionFloor.MinDistanceHit; 
     }
 
     public float InputHorizontal { get => _inputHorizontal; set => _inputHorizontal = value; }
