@@ -20,6 +20,10 @@ public class Partition : MonoBehaviour
     public void InitializePartition(Transform _posStart)
     {
         transform.position = _posStart.position;
+        for(int i = 0; i < _fragmentPartitions.Count; i++)
+        {
+            _fragmentPartitions[i].InitializePartition(i + 1);
+        }
     }
 
     public void InitializePartition(Transform _posStart, float rotation)
