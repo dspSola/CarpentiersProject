@@ -148,7 +148,7 @@ public class VerticalStateMachine : MonoBehaviour
     }
     private void DoGroundedExit()
     {
-
+        _movePlayer.ExitGrounded();
     }
 
     // Jump
@@ -158,8 +158,11 @@ public class VerticalStateMachine : MonoBehaviour
     }
     private void DoJumpingUpdate()
     {
-        ToFalling();
-        ToClimbing();
+        //ToClimbing();
+        if (!_movePlayer.IsInJump)
+        {
+            ToFalling();
+        }
     }
     private void DoJumpingExit()
     {
@@ -219,7 +222,7 @@ public class VerticalStateMachine : MonoBehaviour
         if (_rayCastDetectionDown.IfOnOfRayCastTouch)
         {
             //_movePlayer.RalentitChute();
-            if (_rayCastDetectionDown.MinDistanceHit < 0.001f)
+            if (_rayCastDetectionDown.MinDistanceHit < 0.01f)
             {
                 TransitionToState(PlayerVerticalState.GROUNDED);
                 return;
@@ -247,7 +250,15 @@ public class VerticalStateMachine : MonoBehaviour
     }
     private void ToFalling()
     {
-        if (!_rayCastDetectionDown.IfOnOfRayCastTouch)
+        if (_rayCastDetectionDown.IfOnOfRayCastTouch)
+        {
+            if (_rayCastDetectionDown.MinDistanceHit > 0.01f)
+            {
+                TransitionToState(PlayerVerticalState.FALLING);
+                return;
+            }
+        }
+        else
         {
             TransitionToState(PlayerVerticalState.FALLING);
             return;
