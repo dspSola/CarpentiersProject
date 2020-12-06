@@ -23,6 +23,9 @@ public class NewMovePlayer : MonoBehaviour
 
     [SerializeField] private Transform _transformHitDown, _lastTransformHitDown, _transformHitClimb, _lastTransformHitClimb;
 
+    [SerializeField] private List<AudioClip> _jumpSounds;
+    [SerializeField] private AudioSource _audioSourcePlayer;
+
     private void Awake()
     {
         _speed = _speedMini;
@@ -150,6 +153,9 @@ public class NewMovePlayer : MonoBehaviour
     // Jump
     public void EnterJump()
     {
+        int randomJumpSound = Random.Range(0, _jumpSounds.Count);
+        _audioSourcePlayer.PlayOneShot(_jumpSounds[randomJumpSound]);
+
         _timeToFall = 0;
         _isInJump = true;
     }
