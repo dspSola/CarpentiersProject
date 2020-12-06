@@ -7,6 +7,7 @@ public class NewMovePlayer : MonoBehaviour
     [SerializeField] private HorizontalStateMachine _horizontalStateMachine;
     [SerializeField] private VerticalStateMachine _verticalStateMachine;
     [SerializeField] private NewRayCastFloorManager _rayCastFloorManager;
+    [SerializeField] private RayCastDetection _rayCastDetectionFloor;
     [SerializeField] private Transform _parentPlayerTr;
     [SerializeField] private Rigidbody2D _rigidBody2D;
     [SerializeField] private float _inputHorizontal;
@@ -36,9 +37,13 @@ public class NewMovePlayer : MonoBehaviour
         {
             Jump();
         }
+        if (_verticalStateMachine.CurrentState == PlayerVerticalState.CLIMBING)
+        {
+            Climb();
+        }
         if (_verticalStateMachine.CurrentState == PlayerVerticalState.GROUNDED)
         {
-            StickToGround();
+            //StickToGround();
         }
 
         _rigidBody2D.velocity = _velocity;
@@ -67,7 +72,15 @@ public class NewMovePlayer : MonoBehaviour
     public void Falling()
     {
         _timeToFall += Time.deltaTime;
-        _velocity.y = Physics2D.gravity.y * _timeToFall * _coefGravity;
+
+        if(_rayCastDetectionFloor.MinDistanceHit < 0.02f)
+        {
+            RalentitChute();        
+        }
+        else
+        {
+            _velocity.y = Physics2D.gravity.y * _timeToFall * _coefGravity;
+        }
         Mathf.Clamp(_velocity.y, -_maxVelocityY, _maxVelocityY);
     }
     public void ExitFalling()
@@ -79,11 +92,51 @@ public class NewMovePlayer : MonoBehaviour
     public void EnterGrounded()
     {
         _velocity.y = 0;
+        SetParent(_rayCastDetectionFloor.TransformHit);
     }
-
     public void ExitGrounded()
     {
+        SetNoneParent();
+    }
 
+    // Jump
+    public void EnterJump()
+    {
+        _timeToFall = 0;
+        _isInJump = true;
+    }
+    public void Jump()
+    {
+        if (_pressJump)
+        {
+            if (_timeInJump < _timeInJumpMax)
+            {
+                _timeInJump += Time.deltaTime;
+                //_rigidBody2D.AddForce(new Vector2(0, _forceJump - (_timeInJump / 100)), ForceMode2D.Force);
+                _rigidBody2D.AddForce(new Vector2(0, _forceJump), ForceMode2D.Force);
+            }
+            else
+            {
+                ExitJump();
+            }
+        }
+        else
+        {
+            ExitJump();
+        }
+    }
+    public void ExitJump()
+    {
+        _timeInJump = 0;
+        _isInJump = false;
+    }
+
+    // Climb
+    private void Climb()
+    {
+        _timeToFall += Time.deltaTime;
+        _velocity.y = (Physics2D.gravity.y / 2f) * _timeToFall * _coefGravity;
+        Mathf.Clamp(_velocity.y, -_maxVelocityY, _maxVelocityY);
     }
 
     private void StickToGround()
@@ -114,38 +167,18 @@ public class NewMovePlayer : MonoBehaviour
         //}
     }
 
-    // Jump
-    public void EnterJump()
+    public void RalentitChute()
     {
-        _timeToFall = 0;
-        _isInJump = true;
+        _velocity.y = Physics2D.gravity.y * _timeToFall * _rayCastDetectionFloor.MinDistanceHit;
     }
 
-    public void Jump()
+    public void SetParent(Transform newParent)
     {
-        if (_pressJump)
-        {
-            if (_timeInJump < _timeInJumpMax)
-            {
-                _timeInJump += Time.deltaTime;
-                //_rigidBody2D.AddForce(new Vector2(0, _forceJump - (_timeInJump / 100)), ForceMode2D.Force);
-                _rigidBody2D.AddForce(new Vector2(0, _forceJump), ForceMode2D.Force);
-            }
-            else
-            {
-                ExitJump();
-            }
-        }
-        else
-        {
-            ExitJump();
-        }
+        _parentPlayerTr.parent = newParent;
     }
-
-    public void ExitJump()
+    public void SetNoneParent()
     {
-        _timeInJump = 0;
-        _isInJump = false;
+        _parentPlayerTr.parent = null;
     }
 
     public float InputHorizontal { get => _inputHorizontal; set => _inputHorizontal = value; }
