@@ -8,6 +8,7 @@ public class NewMovePlayer : MonoBehaviour
     [SerializeField] private VerticalStateMachine _verticalStateMachine;
     [SerializeField] private NewRayCastFloorManager _rayCastFloorManager;
     [SerializeField] private RayCastDetection _rayCastDetectionFloor;
+    [SerializeField] private PlayerAnimatorController _playerAnimatorController;
     [SerializeField] private Transform _parentPlayerTr;
     [SerializeField] private Rigidbody2D _rigidBody2D;
     [SerializeField] private float _inputHorizontal;
@@ -22,6 +23,7 @@ public class NewMovePlayer : MonoBehaviour
     private void Update()
     {
         _inputHorizontal = Input.GetAxisRaw("Horizontal");
+        _playerAnimatorController.SetinputX(_inputHorizontal);
         _pressJump = Input.GetButton("Jump");
     }
 
@@ -91,7 +93,6 @@ public class NewMovePlayer : MonoBehaviour
     // Ground
     public void EnterGrounded()
     {
-        _velocity.y = 0;
         SetParent(_rayCastDetectionFloor.TransformHit);
     }
     public void ExitGrounded()
@@ -169,7 +170,7 @@ public class NewMovePlayer : MonoBehaviour
 
     public void RalentitChute()
     {
-        _velocity.y = Physics2D.gravity.y * _timeToFall * _rayCastDetectionFloor.MinDistanceHit;
+        _velocity.y = Physics2D.gravity.y * Time.deltaTime * _rayCastDetectionFloor.MinDistanceHit;
     }
 
     public void SetParent(Transform newParent)
