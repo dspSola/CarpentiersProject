@@ -644,6 +644,7 @@ MonoBehaviour:
     m_StretchWidth: 1
     m_StretchHeight: 0
   _movePlayer: {fileID: 2015439528}
+  _playerAnimatorController: {fileID: 1087834366}
   _debugOnGui: 1
 --- !u!114 &475547733
 MonoBehaviour:
@@ -725,6 +726,7 @@ MonoBehaviour:
     m_StretchWidth: 1
     m_StretchHeight: 1
   _movePlayer: {fileID: 2015439528}
+  _playerAnimatorController: {fileID: 1087834366}
   _rayCastDetectionUp: {fileID: 262450258}
   _rayCastDetectionRight: {fileID: 1375900794}
   _rayCastDetectionDown: {fileID: 690147330}
@@ -1040,6 +1042,7 @@ GameObject:
   - component: {fileID: 1087834363}
   - component: {fileID: 1087834364}
   - component: {fileID: 1087834365}
+  - component: {fileID: 1087834366}
   m_Layer: 8
   m_Name: Sprite
   m_TagString: Untagged
@@ -1131,6 +1134,20 @@ Animator:
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorControllerStateOnDisable: 0
+--- !u!114 &1087834366
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1087834362}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 39a515592cd84fa4f91e8fba86133a59, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _animator: {fileID: 1087834365}
+  _spriteRenderer: {fileID: 1087834364}
 --- !u!1 &1128863004
 GameObject:
   m_ObjectHideFlags: 0
@@ -1142,6 +1159,7 @@ GameObject:
   - component: {fileID: 1128863008}
   - component: {fileID: 1128863007}
   - component: {fileID: 1128863006}
+  - component: {fileID: 1128863005}
   m_Layer: 8
   m_Name: NewPlayer
   m_TagString: Untagged
@@ -1149,6 +1167,20 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
+--- !u!114 &1128863005
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1128863004}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b0a7c5201b8817a46a4aac43ab9fc823, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _playerData: {fileID: 11400000, guid: 68e99fb0ee722e24394a6ae0fb879466, type: 2}
+  _cptFragment: 0
 --- !u!61 &1128863006
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -1173,7 +1205,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 0.02, y: 0.07}
+  m_Size: {x: 0.005, y: 0.08}
   m_EdgeRadius: 0
 --- !u!50 &1128863007
 Rigidbody2D:
@@ -1883,25 +1915,37 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6d0c3e83419764d4d908d09853e42be8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _playerData: {fileID: 11400000, guid: 68e99fb0ee722e24394a6ae0fb879466, type: 2}
   _horizontalStateMachine: {fileID: 475547732}
   _verticalStateMachine: {fileID: 475547733}
   _rayCastFloorManager: {fileID: 1650773772}
-  _rayCastDetectionFloor: {fileID: 690147330}
+  _rayCastDetectionDown: {fileID: 690147330}
+  _rayCastDetectionLeft: {fileID: 1531252904}
+  _rayCastDetectionRight: {fileID: 1375900794}
+  _playerAnimatorController: {fileID: 1087834366}
   _parentPlayerTr: {fileID: 1128863008}
   _rigidBody2D: {fileID: 1128863007}
   _inputHorizontal: 0
+  _speedInputHorizontal: 0
+  _accelerationSpeedInputHorizontal: 0.5
   _velocity: {x: 0, y: 0}
   _pressJump: 0
   _isInJump: 0
-  _speedX: 0.5
+  _speed: 0
+  _speedWalk: 20
   _forceJump: 0.01
+  _maxVelocityY: 10
   _timeInJump: 0
   _timeInJumpMax: 0.2
   _timeToFall: 0
-  _maxVelocityY: 10
-  _coefGravity: 0.5
+  _timeToClimb: 0
+  _climbForcePush: 0
+  _cptGameFlowDown: 0
+  _coefGravity: 0.25
   _rigidbodyOnFloorPosition: {x: 0, y: 0}
   _floorOffsetY: 0
+  _transformHitDown: {fileID: 0}
+  _lastTransformHitDown: {fileID: 0}
 --- !u!1 &2089802358
 GameObject:
   m_ObjectHideFlags: 0

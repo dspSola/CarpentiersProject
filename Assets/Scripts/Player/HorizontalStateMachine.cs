@@ -14,6 +14,7 @@ public class HorizontalStateMachine : MonoBehaviour
     public GUIStyle myStyle;
 
     [SerializeField] private NewMovePlayer _movePlayer;
+    [SerializeField] private PlayerAnimatorController _playerAnimatorController;
     [SerializeField] private bool _debugOnGui;
     public PlayerHorizontalState CurrentState
     {
@@ -119,7 +120,8 @@ public class HorizontalStateMachine : MonoBehaviour
     // Left
     private void DoLeftEnter()
     {
-
+        _playerAnimatorController.SetLeft(true);
+        _playerAnimatorController.SetFlipX(true);
     }
     private void DoLeftUpdate()
     {
@@ -136,13 +138,14 @@ public class HorizontalStateMachine : MonoBehaviour
     }
     private void DoLeftExit()
     {
+        _playerAnimatorController.SetLeft(false);
         _movePlayer.ExitMoveX();
     }
 
     // Idle
     private void DoIdleEnter()
     {
-
+        _playerAnimatorController.SetIdle(true);
     }
     private void DoIdleUpdate()
     {
@@ -160,13 +163,14 @@ public class HorizontalStateMachine : MonoBehaviour
     }
     private void DoIdleExit()
     {
-
+        _playerAnimatorController.SetIdle(false);
     }
 
     // Right
     private void DoRightEnter()
     {
-
+        _playerAnimatorController.SetRight(true);
+        _playerAnimatorController.SetFlipX(false);
     }
     private void DoRightUpdate()
     {
@@ -183,6 +187,7 @@ public class HorizontalStateMachine : MonoBehaviour
     }
     private void DoRightExit()
     {
+        _playerAnimatorController.SetRight(false);
         _movePlayer.ExitMoveX();
     }
 

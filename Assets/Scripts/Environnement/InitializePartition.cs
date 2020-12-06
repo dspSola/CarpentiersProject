@@ -7,7 +7,7 @@ public class InitializePartition : MonoBehaviour
     [SerializeField] private Partition _partition;
     [SerializeField] private InitializeDetectZone _initializeDetectZone;
     [SerializeField] private bool _toUp, _toDown, _toRight, _toLeft, _setRandomSpriteAllFragment, _setRandomRotationAllFragment;
-    [SerializeField] private Transform _startTopPos, _startRightPos, _startDownPos, _startLeftPos;
+    [SerializeField] private Transform _startTopPos, _startRightPos, _startDownPos, _startLeftPos, _deadZoneUp, _deadZoneRight, _deadZoneDown, _deadZoneLeft;
 
     private void Start()
     {
@@ -45,21 +45,25 @@ public class InitializePartition : MonoBehaviour
             {
                 _partition.InitializePartition(_startDownPos);
                 _initializeDetectZone.Initialize("Down");
+                _deadZoneDown.position += Vector3.down * 0.5f;
             }
             if (_toDown)
             {
                 _partition.InitializePartition(_startTopPos);
                 _initializeDetectZone.Initialize("Top");
+                _deadZoneUp.position += Vector3.up * 0.5f;
             }
             if (_toRight)
             {
                 _partition.InitializePartition(_startLeftPos, 90f);
                 _initializeDetectZone.Initialize("Left");
+                _deadZoneLeft.position += Vector3.left * 0.5f;
             }
             if (_toLeft)
             {
                 _partition.InitializePartition(_startRightPos, -90f);
                 _initializeDetectZone.Initialize("Right");
+                _deadZoneRight.position += Vector3.right * 0.5f;
             }
 
             if (_setRandomSpriteAllFragment)
