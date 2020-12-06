@@ -15,6 +15,7 @@ public class VerticalStateMachine : MonoBehaviour
     public GUIStyle myStyle;
 
     [SerializeField] private NewMovePlayer _movePlayer;
+    [SerializeField] private PlayerAnimatorController _playerAnimatorController;
     [SerializeField] private RayCastDetection _rayCastDetectionUp, _rayCastDetectionRight, _rayCastDetectionDown, _rayCastDetectionLeft;
     [SerializeField] private OverLapFloor _overLapFloor;
     [SerializeField] private bool _debugOnGui;
@@ -134,6 +135,7 @@ public class VerticalStateMachine : MonoBehaviour
     private void DoGroundedEnter()
     {
         Debug.Log("DoGroundedEnter");
+        _playerAnimatorController.SetGrounded(true);
         _movePlayer.EnterGrounded();
     }
     private void DoGroundedUpdate()
@@ -148,12 +150,14 @@ public class VerticalStateMachine : MonoBehaviour
     }
     private void DoGroundedExit()
     {
+        _playerAnimatorController.SetGrounded(false);
         _movePlayer.ExitGrounded();
     }
 
     // Jump
     private void DoJumpingEnter()
     {
+        _playerAnimatorController.SetJumping(true);
         _movePlayer.EnterJump();
     }
     private void DoJumpingUpdate()
@@ -166,13 +170,13 @@ public class VerticalStateMachine : MonoBehaviour
     }
     private void DoJumpingExit()
     {
-
+        _playerAnimatorController.SetJumping(false);
     }
 
     // Climb
     private void DoClimbingEnter()
     {
-
+        _playerAnimatorController.SetClimbing(true);
     }
     private void DoClimbingUpdate()
     {
@@ -181,13 +185,14 @@ public class VerticalStateMachine : MonoBehaviour
     }
     private void DoClimbingExit()
     {
-
+        _playerAnimatorController.SetClimbing(false);
     }
 
     // Fall
     private void DoFallingEnter()
     {
         Debug.Log("DoFallingEnter");
+        _playerAnimatorController.SetFalling(true);
         _movePlayer.EnterFalling();
     }
     private void DoFallingUpdate()
@@ -204,6 +209,7 @@ public class VerticalStateMachine : MonoBehaviour
     }
     private void DoFallingExit()
     {
+        _playerAnimatorController.SetFalling(false);
         _movePlayer.ExitFalling();
     }
 
@@ -250,18 +256,16 @@ public class VerticalStateMachine : MonoBehaviour
     }
     private void ToFalling()
     {
-        if (_rayCastDetectionDown.IfOnOfRayCastTouch)
-        {
-            if (_rayCastDetectionDown.MinDistanceHit > 0.01f)
-            {
-                TransitionToState(PlayerVerticalState.FALLING);
-                return;
-            }
-        }
-        else
+        if (!_rayCastDetectionDown.IfOnOfRayCastTouch)
         {
             TransitionToState(PlayerVerticalState.FALLING);
             return;
+
+            //if (_rayCastDetectionDown.MinDistanceHit > 0.01f)
+            //{
+            //    TransitionToState(PlayerVerticalState.FALLING);
+            //    return;
+            //}
         }
     }
 

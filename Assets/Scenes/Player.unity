@@ -644,6 +644,7 @@ MonoBehaviour:
     m_StretchWidth: 1
     m_StretchHeight: 0
   _movePlayer: {fileID: 2015439528}
+  _playerAnimatorController: {fileID: 1087834366}
   _debugOnGui: 1
 --- !u!114 &475547733
 MonoBehaviour:
@@ -725,6 +726,7 @@ MonoBehaviour:
     m_StretchWidth: 1
     m_StretchHeight: 1
   _movePlayer: {fileID: 2015439528}
+  _playerAnimatorController: {fileID: 1087834366}
   _rayCastDetectionUp: {fileID: 262450258}
   _rayCastDetectionRight: {fileID: 1375900794}
   _rayCastDetectionDown: {fileID: 690147330}
@@ -1040,6 +1042,7 @@ GameObject:
   - component: {fileID: 1087834363}
   - component: {fileID: 1087834364}
   - component: {fileID: 1087834365}
+  - component: {fileID: 1087834366}
   m_Layer: 8
   m_Name: Sprite
   m_TagString: Untagged
@@ -1131,6 +1134,20 @@ Animator:
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorControllerStateOnDisable: 0
+--- !u!114 &1087834366
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1087834362}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 39a515592cd84fa4f91e8fba86133a59, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _animator: {fileID: 1087834365}
+  _spriteRenderer: {fileID: 1087834364}
 --- !u!1 &1128863004
 GameObject:
   m_ObjectHideFlags: 0
@@ -1887,6 +1904,7 @@ MonoBehaviour:
   _verticalStateMachine: {fileID: 475547733}
   _rayCastFloorManager: {fileID: 1650773772}
   _rayCastDetectionFloor: {fileID: 690147330}
+  _playerAnimatorController: {fileID: 1087834366}
   _parentPlayerTr: {fileID: 1128863008}
   _rigidBody2D: {fileID: 1128863007}
   _inputHorizontal: 0
