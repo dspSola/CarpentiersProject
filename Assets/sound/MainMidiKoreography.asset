@@ -10,17 +10,17 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: -2076007791, guid: aa81bbec85a3f423193272a7c6154986, type: 3}
-  m_Name: NewKoreography
+  m_Name: MainMidiKoreography
   m_EditorClassIdentifier: 
   mSourceClip: {fileID: 8300000, guid: 02d784f5ba581c04d9922a9b6e33d5aa, type: 3}
   mAudioFilePath: 
   mSampleRate: 44100
   mIgnoreLatencyOffset: 0
   mTempoSections:
-  - sectionName: Section
+  - sectionName: MusicMain
     startSample: 0
     samplesPerBeat: 18663.3846
     beatsPerMeasure: 4
     bStartNewMeasure: 0
   mTracks:
-  - {fileID: 11400000, guid: 6d0a87c4f1344f746b87e76757e79afb, type: 2}
+  - {fileID: 11400000, guid: 21da437ecb65c344094fa0d4a1f96358, type: 2}
