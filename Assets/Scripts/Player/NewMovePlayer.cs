@@ -4,25 +4,59 @@ using UnityEngine;
 
 public class NewMovePlayer : MonoBehaviour
 {
+    [SerializeField] private PlayerData _playerData;
     [SerializeField] private HorizontalStateMachine _horizontalStateMachine;
     [SerializeField] private VerticalStateMachine _verticalStateMachine;
     [SerializeField] private NewRayCastFloorManager _rayCastFloorManager;
-    [SerializeField] private RayCastDetection _rayCastDetectionFloor;
+    [SerializeField] private RayCastDetection _rayCastDetectionDown, _rayCastDetectionLeft, _rayCastDetectionRight;
+    [SerializeField] private PlayerAnimatorController _playerAnimatorController;
     [SerializeField] private Transform _parentPlayerTr;
     [SerializeField] private Rigidbody2D _rigidBody2D;
-    [SerializeField] private float _inputHorizontal;
+    [SerializeField] private float _inputHorizontal, _speedInputHorizontal, _accelerationSpeedInputHorizontal;
     [SerializeField] private Vector2 _velocity;
 
     [SerializeField] private bool _pressJump, _isInJump;
-    [SerializeField] private float _speedX, _forceJump, _timeInJump, _timeInJumpMax, _timeToFall, _maxVelocityY;
+    [SerializeField] private float _speed, _speedWalk, _speedMini, _forceJump, _maxVelocityY, _timeInJump, _timeInJumpMax, _timeToFall, _timeToClimb, _climbForcePush, _cptGameFlowTransform;
     [SerializeField] [Range(0f, 2f)] private float _coefGravity;
     [SerializeField] private Vector2 _rigidbodyOnFloorPosition;
     [SerializeField] private float _floorOffsetY;
 
+    [SerializeField] private Transform _transformHitDown, _lastTransformHitDown, _transformHitClimb, _lastTransformHitClimb;
+
+    [SerializeField] private List<AudioClip> _jumpSounds;
+    [SerializeField] private AudioSource _audioSourcePlayer;
+
+    private void Awake()
+    {
+        _speed = _speedMini;
+    }
+
+    private void Start()
+    {
+
+    }
+
     private void Update()
     {
         _inputHorizontal = Input.GetAxisRaw("Horizontal");
+        _playerAnimatorController.SetinputX(_inputHorizontal);
         _pressJump = Input.GetButton("Jump");
+        _playerData.PositionPlayer = _parentPlayerTr.position;
+
+        if (_horizontalStateMachine.CurrentState != PlayerHorizontalState.IDLE)
+        {
+            if (_speed < _speedWalk)
+            {
+                _speed += Time.deltaTime * _accelerationSpeedInputHorizontal;
+            }
+        }
+        else
+        {
+            if (_speed > _speedMini)
+            {
+                _speed -= Time.deltaTime * _accelerationSpeedInputHorizontal * 2;
+            }
+        }
     }
 
     private void FixedUpdate()
@@ -50,12 +84,17 @@ public class NewMovePlayer : MonoBehaviour
     }
 
     // Horizontal
+    public void EnterLeftOrRight()
+    {
+
+    }
     public void MoveX()
     {
-        if (_horizontalStateMachine.CurrentState != PlayerHorizontalState.IDLE)
-        {
-            _velocity.x = _inputHorizontal * _speedX;
-        }
+        _velocity.x = _inputHorizontal * _speed * Time.fixedDeltaTime;
+    }
+    public void ExitLeftOrRight()
+    {
+
     }
 
     public void ExitMoveX()
@@ -73,7 +112,7 @@ public class NewMovePlayer : MonoBehaviour
     {
         _timeToFall += Time.deltaTime;
 
-        if(_rayCastDetectionFloor.MinDistanceHit < 0.02f)
+        if(_rayCastDetectionDown.MinDistanceHit < 0.02f)
         {
             RalentitChute();        
         }
@@ -91,8 +130,20 @@ public class NewMovePlayer : MonoBehaviour
     // Ground
     public void EnterGrounded()
     {
-        _velocity.y = 0;
-        SetParent(_rayCastDetectionFloor.TransformHit);
+        _transformHitDown = _rayCastDetectionDown.TransformHit;
+        SetParent(_transformHitDown);
+        
+        if(_transformHitDown != _lastTransformHitDown)
+        {
+            _cptGameFlowTransform++;
+            _playerData.GameFlow += 0.1f * _cptGameFlowTransform;
+        }
+        else
+        {
+            _playerData.GameFlow -= 0.1f * _cptGameFlowTransform / 2;
+            _cptGameFlowTransform = 1;
+        }
+        _lastTransformHitDown = _transformHitDown;
     }
     public void ExitGrounded()
     {
@@ -102,6 +153,9 @@ public class NewMovePlayer : MonoBehaviour
     // Jump
     public void EnterJump()
     {
+        int randomJumpSound = Random.Range(0, _jumpSounds.Count);
+        _audioSourcePlayer.PlayOneShot(_jumpSounds[randomJumpSound]);
+
         _timeToFall = 0;
         _isInJump = true;
     }
@@ -132,11 +186,57 @@ public class NewMovePlayer : MonoBehaviour
     }
 
     // Climb
+    public void EnterClimb()
+    {
+        _timeToClimb = 0;
+        _climbForcePush = 0;
+        if(_horizontalStateMachine.CurrentState == PlayerHorizontalState.LEFT)
+        {
+            _transformHitClimb = _rayCastDetectionLeft.TransformHit;
+            SetParent(_transformHitClimb);
+        }
+        else if (_horizontalStateMachine.CurrentState == PlayerHorizontalState.RIGHT)
+        {
+            _transformHitClimb = _rayCastDetectionRight.TransformHit;
+            SetParent(_rayCastDetectionRight.TransformHit);
+        }
+
+        if (_transformHitClimb != _lastTransformHitClimb)
+        {
+            _cptGameFlowTransform++;
+            _playerData.GameFlow += 0.1f * _cptGameFlowTransform;
+        }
+        else
+        {
+            _playerData.GameFlow -= 0.1f * _cptGameFlowTransform;
+            _cptGameFlowTransform = 1;
+        }
+        _lastTransformHitClimb = _transformHitClimb;
+    }
     private void Climb()
     {
-        _timeToFall += Time.deltaTime;
-        _velocity.y = (Physics2D.gravity.y / 2f) * _timeToFall * _coefGravity;
-        Mathf.Clamp(_velocity.y, -_maxVelocityY, _maxVelocityY);
+        _timeToClimb += Time.deltaTime;
+        _velocity.y = (Physics2D.gravity.y / 2f) * _timeToClimb * _coefGravity / 2;
+        Mathf.Clamp(_velocity.y, -_maxVelocityY / 2, _maxVelocityY / 2);
+
+        _playerData.GameFlow -= _timeToClimb * 0.0001f;
+    }
+    public void ExitClimb()
+    {
+        if (_inputHorizontal < 0)
+        {
+            _climbForcePush = -0.01f;
+        }
+        else if (_inputHorizontal > 0)
+        {
+            _climbForcePush = -0.01f;
+        }
+        else
+        {
+            _climbForcePush = 0f;
+        }
+
+        SetNoneParent();
     }
 
     private void StickToGround()
@@ -169,7 +269,7 @@ public class NewMovePlayer : MonoBehaviour
 
     public void RalentitChute()
     {
-        _velocity.y = Physics2D.gravity.y * _timeToFall * _rayCastDetectionFloor.MinDistanceHit;
+        _velocity.y = Physics2D.gravity.y * _timeToFall * _rayCastDetectionDown.MinDistanceHit * _coefGravity / 2;
     }
 
     public void SetParent(Transform newParent)
@@ -184,4 +284,5 @@ public class NewMovePlayer : MonoBehaviour
     public float InputHorizontal { get => _inputHorizontal; set => _inputHorizontal = value; }
     public bool PressJump { get => _pressJump; set => _pressJump = value; }
     public bool IsInJump { get => _isInJump; set => _isInJump = value; }
+    public float ClimbForcePush { get => _climbForcePush; set => _climbForcePush = value; }
 }

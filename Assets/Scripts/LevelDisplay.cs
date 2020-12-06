@@ -17,7 +17,7 @@ namespace SonicBloom.Koreo.Demos
 		public string eventID;
 
 		[Tooltip("The number of milliseconds (both early and late) within which input will be detected as a Hit.")]
-		[Range(8f, 150f)]
+		[Range(8f, 250f)]
 		public float hitWindowRangeInMS = 80;
 
 		[Tooltip("The number of units traversed per second by Note Objects.")]

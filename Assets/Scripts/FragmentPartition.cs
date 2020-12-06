@@ -6,6 +6,12 @@ public class FragmentPartition : MonoBehaviour
 {
     [SerializeField] private SpriteRenderer _spriteRenderer;
     [SerializeField] List<Sprite> _partitionSprites;
+    [SerializeField] private int _cptFragment;
+
+    public void InitializePartition(int cptFragment)
+    {
+        _cptFragment = cptFragment;
+    }
 
     public void SetRandomSprite()
     {
@@ -14,7 +20,6 @@ public class FragmentPartition : MonoBehaviour
 
         _spriteRenderer.sprite = _partitionSprites[randomSprite];
     }
-
     public void SetRandomRotation()
     {
         int randomRotation = Random.Range(0, 4);
@@ -37,4 +42,7 @@ public class FragmentPartition : MonoBehaviour
             _spriteRenderer.flipY = true;
         }
     }
+
+
+    public int CptFragment { get => _cptFragment; set => _cptFragment = value; }
 }
