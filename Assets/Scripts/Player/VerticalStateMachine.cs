@@ -230,7 +230,7 @@ public class VerticalStateMachine : MonoBehaviour
         if (_rayCastDetectionDown.IfOnOfRayCastTouch)
         {
             //_movePlayer.RalentitChute();
-            if (_rayCastDetectionDown.MinDistanceHit < 0.01f)
+            if (_rayCastDetectionDown.MinDistanceHit < 0.025f)
             {
                 TransitionToState(PlayerVerticalState.GROUNDED);
                 return;

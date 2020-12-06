@@ -197,7 +197,7 @@ namespace SonicBloom.Koreo.Demos
 				KoreographyEvent evt = laneEvents[pendingEventIdx];
 
 				NotePrefab newObj = _gameController.GetFreshNoteObject();
-				//newObj.Initialize(evt, color, this, _gameController);
+				newObj.Initialize(evt, color, this, _gameController);
 
 				trackedNotes.Enqueue(newObj);
 
