@@ -1927,25 +1927,28 @@ MonoBehaviour:
   _rigidBody2D: {fileID: 1128863007}
   _inputHorizontal: 0
   _speedInputHorizontal: 0
-  _accelerationSpeedInputHorizontal: 0.5
+  _accelerationSpeedInputHorizontal: 20
   _velocity: {x: 0, y: 0}
   _pressJump: 0
   _isInJump: 0
   _speed: 0
-  _speedWalk: 40
-  _forceJump: 0.01
+  _speedWalk: 50
+  _speedMini: 20
+  _forceJump: 0.005
   _maxVelocityY: 10
   _timeInJump: 0
-  _timeInJumpMax: 0.2
+  _timeInJumpMax: 0.3
   _timeToFall: 0
   _timeToClimb: 0
   _climbForcePush: 0
-  _cptGameFlowDown: 0
+  _cptGameFlowTransform: 0
   _coefGravity: 0.25
   _rigidbodyOnFloorPosition: {x: 0, y: 0}
   _floorOffsetY: 0
   _transformHitDown: {fileID: 0}
   _lastTransformHitDown: {fileID: 0}
+  _transformHitClimb: {fileID: 0}
+  _lastTransformHitClimb: {fileID: 0}
 --- !u!1 &2089802358
 GameObject:
   m_ObjectHideFlags: 0

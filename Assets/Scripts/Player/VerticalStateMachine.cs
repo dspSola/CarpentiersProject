@@ -258,7 +258,7 @@ public class VerticalStateMachine : MonoBehaviour
     }
     private void ToFalling()
     {
-        if (!_rayCastDetectionDown.IfOnOfRayCastTouch)
+        if (_rayCastDetectionDown.MinDistanceHit > 0.025f)
         {
             TransitionToState(PlayerVerticalState.FALLING);
             return;

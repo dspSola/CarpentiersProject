@@ -8,6 +8,7 @@ public class PlayerData : ScriptableObject
     [SerializeField] private Vector2 _positionPlayer;
     [SerializeField] private int _cptFragmentPartition;
     [SerializeField] private float _gameFlow;
+    [SerializeField] private float _score;
 
     public void InitPlayerData()
     {
@@ -19,4 +20,5 @@ public class PlayerData : ScriptableObject
     public Vector2 PositionPlayer { get => _positionPlayer; set => _positionPlayer = value; }
     public int CptFragmentPartition { get => _cptFragmentPartition; set => _cptFragmentPartition = value; }
     public float GameFlow { get => _gameFlow; set => _gameFlow = value; }
+    public float Score { get => _score; set => _score = value; }
 }

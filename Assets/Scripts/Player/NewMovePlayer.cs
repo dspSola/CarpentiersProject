@@ -16,12 +16,17 @@ public class NewMovePlayer : MonoBehaviour
     [SerializeField] private Vector2 _velocity;
 
     [SerializeField] private bool _pressJump, _isInJump;
-    [SerializeField] private float _speed, _speedWalk, _forceJump, _maxVelocityY, _timeInJump, _timeInJumpMax, _timeToFall, _timeToClimb, _climbForcePush, _cptGameFlowDown;
+    [SerializeField] private float _speed, _speedWalk, _speedMini, _forceJump, _maxVelocityY, _timeInJump, _timeInJumpMax, _timeToFall, _timeToClimb, _climbForcePush, _cptGameFlowTransform;
     [SerializeField] [Range(0f, 2f)] private float _coefGravity;
     [SerializeField] private Vector2 _rigidbodyOnFloorPosition;
     [SerializeField] private float _floorOffsetY;
 
-    [SerializeField] private Transform _transformHitDown, _lastTransformHitDown;
+    [SerializeField] private Transform _transformHitDown, _lastTransformHitDown, _transformHitClimb, _lastTransformHitClimb;
+
+    private void Awake()
+    {
+        _speed = _speedMini;
+    }
 
     private void Start()
     {
@@ -34,6 +39,21 @@ public class NewMovePlayer : MonoBehaviour
         _playerAnimatorController.SetinputX(_inputHorizontal);
         _pressJump = Input.GetButton("Jump");
         _playerData.PositionPlayer = _parentPlayerTr.position;
+
+        if (_horizontalStateMachine.CurrentState != PlayerHorizontalState.IDLE)
+        {
+            if (_speed < _speedWalk)
+            {
+                _speed += Time.deltaTime * _accelerationSpeedInputHorizontal;
+            }
+        }
+        else
+        {
+            if (_speed > _speedMini)
+            {
+                _speed -= Time.deltaTime * _accelerationSpeedInputHorizontal * 2;
+            }
+        }
     }
 
     private void FixedUpdate()
@@ -61,23 +81,17 @@ public class NewMovePlayer : MonoBehaviour
     }
 
     // Horizontal
+    public void EnterLeftOrRight()
+    {
+
+    }
     public void MoveX()
     {
-        //if (_horizontalStateMachine.CurrentState != PlayerHorizontalState.IDLE)
-        //{
-        //    if (_speed < _speedWalk)
-        //    {
-        //        _speed += Time.deltaTime * _accelerationSpeedInputHorizontal;
-        //    }
-        //    else if (_speed > _speedWalk)
-        //    {
-        //        _speed = _speedWalk;
-        //    }
+        _velocity.x = _inputHorizontal * _speed * Time.fixedDeltaTime;
+    }
+    public void ExitLeftOrRight()
+    {
 
-        //    _velocity.x = _inputHorizontal * _speed;
-        //}
-
-        _velocity.x = _inputHorizontal * _speedWalk * Time.fixedDeltaTime;
     }
 
     public void ExitMoveX()
@@ -118,14 +132,13 @@ public class NewMovePlayer : MonoBehaviour
         
         if(_transformHitDown != _lastTransformHitDown)
         {
-            _cptGameFlowDown++;
-            _playerData.GameFlow += 0.1f * _cptGameFlowDown;
+            _cptGameFlowTransform++;
+            _playerData.GameFlow += 0.1f * _cptGameFlowTransform;
         }
         else
         {
-            //_cptGameFlowDown = 0;
-            _playerData.GameFlow -= 0.1f * _cptGameFlowDown;
-            _cptGameFlowDown = 0;
+            _playerData.GameFlow -= 0.1f * _cptGameFlowTransform / 2;
+            _cptGameFlowTransform = 1;
         }
         _lastTransformHitDown = _transformHitDown;
     }
@@ -173,12 +186,26 @@ public class NewMovePlayer : MonoBehaviour
         _climbForcePush = 0;
         if(_horizontalStateMachine.CurrentState == PlayerHorizontalState.LEFT)
         {
-            SetParent(_rayCastDetectionLeft.TransformHit);
+            _transformHitClimb = _rayCastDetectionLeft.TransformHit;
+            SetParent(_transformHitClimb);
         }
         else if (_horizontalStateMachine.CurrentState == PlayerHorizontalState.RIGHT)
         {
+            _transformHitClimb = _rayCastDetectionRight.TransformHit;
             SetParent(_rayCastDetectionRight.TransformHit);
         }
+
+        if (_transformHitClimb != _lastTransformHitClimb)
+        {
+            _cptGameFlowTransform++;
+            _playerData.GameFlow += 0.1f * _cptGameFlowTransform;
+        }
+        else
+        {
+            _playerData.GameFlow -= 0.1f * _cptGameFlowTransform;
+            _cptGameFlowTransform = 1;
+        }
+        _lastTransformHitClimb = _transformHitClimb;
     }
     private void Climb()
     {

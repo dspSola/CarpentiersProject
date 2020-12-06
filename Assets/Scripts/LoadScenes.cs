@@ -8,5 +8,6 @@ public class LoadScenes : MonoBehaviour
         SceneManager.LoadScene("Camera", LoadSceneMode.Additive);
         SceneManager.LoadScene("Player", LoadSceneMode.Additive);
         SceneManager.LoadScene("Map", LoadSceneMode.Additive);
+        SceneManager.LoadScene("Score", LoadSceneMode.Additive);
     }
 }
