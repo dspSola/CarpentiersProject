@@ -13,7 +13,6 @@ public enum PlayerVerticalState
 public class VerticalStateMachine : MonoBehaviour
 {
     public GUIStyle myStyle;
-
     [SerializeField] private NewMovePlayer _movePlayer;
     [SerializeField] private PlayerAnimatorController _playerAnimatorController;
     [SerializeField] private RayCastDetection _rayCastDetectionUp, _rayCastDetectionRight, _rayCastDetectionDown, _rayCastDetectionLeft;
@@ -177,15 +176,18 @@ public class VerticalStateMachine : MonoBehaviour
     private void DoClimbingEnter()
     {
         _playerAnimatorController.SetClimbing(true);
+        _movePlayer.EnterClimb();
     }
     private void DoClimbingUpdate()
     {
         ToGrounded();
         ToJumping();
+        ClimbingToFalling();
     }
     private void DoClimbingExit()
     {
         _playerAnimatorController.SetClimbing(false);
+        _movePlayer.ExitClimb();
     }
 
     // Fall
@@ -247,7 +249,7 @@ public class VerticalStateMachine : MonoBehaviour
     {
         if(_rayCastDetectionLeft.IfOnOfRayCastTouch || _rayCastDetectionRight.IfOnOfRayCastTouch)
         {
-            if (_rayCastDetectionLeft.MinDistanceHit < 0.015f || _rayCastDetectionRight.MinDistanceHit < 0.015f)
+            if (_rayCastDetectionLeft.MinDistanceHit <= 0.02f || _rayCastDetectionRight.MinDistanceHit <= 0.02f)
             {
                 TransitionToState(PlayerVerticalState.CLIMBING);
                 return;
@@ -260,12 +262,15 @@ public class VerticalStateMachine : MonoBehaviour
         {
             TransitionToState(PlayerVerticalState.FALLING);
             return;
+        }
+    }
 
-            //if (_rayCastDetectionDown.MinDistanceHit > 0.01f)
-            //{
-            //    TransitionToState(PlayerVerticalState.FALLING);
-            //    return;
-            //}
+    private void ClimbingToFalling()
+    {
+        if (_rayCastDetectionLeft.MinDistanceHit > 0.02f && _rayCastDetectionRight.MinDistanceHit > 0.02f)
+        {
+            TransitionToState(PlayerVerticalState.FALLING);
+            return;
         }
     }
 
