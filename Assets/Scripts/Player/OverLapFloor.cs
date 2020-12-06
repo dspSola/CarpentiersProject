@@ -13,6 +13,8 @@ public class OverLapFloor : MonoBehaviour
     [SerializeField] private bool _drawGizmos;
     [SerializeField] private Color _gizmosColor;
 
+    [SerializeField] private Transform _transformHit;
+
     private Collider2D[] _colliderBuffer = new Collider2D[1];
     private Color _activeColor;
     private Color _inactiveColor;

@@ -385,6 +385,7 @@ MonoBehaviour:
   _ifActive: 1
   _ifOnOfRayCastTouch: 0
   _ifOnOfRayCastTouchAt0: 0
+  _transformHit: {fileID: 0}
 --- !u!1 &412673880
 GameObject:
   m_ObjectHideFlags: 0
@@ -924,6 +925,7 @@ MonoBehaviour:
   _ifActive: 1
   _ifOnOfRayCastTouch: 0
   _ifOnOfRayCastTouchAt0: 0
+  _transformHit: {fileID: 0}
 --- !u!1 &957750535
 GameObject:
   m_ObjectHideFlags: 0
@@ -1026,6 +1028,7 @@ MonoBehaviour:
   _center: {fileID: 23693458}
   _drawGizmos: 1
   _gizmosColor: {r: 1, g: 0.86603415, b: 0, a: 1}
+  _transformHit: {fileID: 0}
 --- !u!1 &1087834362
 GameObject:
   m_ObjectHideFlags: 0
@@ -1170,7 +1173,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 0.0025, y: 0.0175}
+  m_Size: {x: 0.02, y: 0.07}
   m_EdgeRadius: 0
 --- !u!50 &1128863007
 Rigidbody2D:
@@ -1335,6 +1338,7 @@ MonoBehaviour:
   _ifActive: 1
   _ifOnOfRayCastTouch: 0
   _ifOnOfRayCastTouchAt0: 0
+  _transformHit: {fileID: 0}
 --- !u!1 &1379332146
 GameObject:
   m_ObjectHideFlags: 0
@@ -1527,6 +1531,7 @@ MonoBehaviour:
   _ifActive: 1
   _ifOnOfRayCastTouch: 0
   _ifOnOfRayCastTouchAt0: 0
+  _transformHit: {fileID: 0}
 --- !u!1 &1575989790
 GameObject:
   m_ObjectHideFlags: 0
@@ -1891,7 +1896,7 @@ MonoBehaviour:
   _speedX: 0.5
   _forceJump: 0.01
   _timeInJump: 0
-  _timeInJumpMax: 0.1
+  _timeInJumpMax: 0.2
   _timeToFall: 0
   _maxVelocityY: 10
   _coefGravity: 0.5

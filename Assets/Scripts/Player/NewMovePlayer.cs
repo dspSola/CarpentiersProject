@@ -73,10 +73,9 @@ public class NewMovePlayer : MonoBehaviour
     {
         _timeToFall += Time.deltaTime;
 
-        if(_rayCastDetectionFloor.MinDistanceHit < 0.015f)
+        if(_rayCastDetectionFloor.MinDistanceHit < 0.02f)
         {
-            //RalentitChute();
-            _velocity.y = Physics2D.gravity.y * _rayCastDetectionFloor.MinDistanceHit;
+            RalentitChute();        
         }
         else
         {
@@ -93,10 +92,11 @@ public class NewMovePlayer : MonoBehaviour
     public void EnterGrounded()
     {
         _velocity.y = 0;
+        SetParent(_rayCastDetectionFloor.TransformHit);
     }
     public void ExitGrounded()
     {
-
+        SetNoneParent();
     }
 
     // Jump
@@ -169,7 +169,16 @@ public class NewMovePlayer : MonoBehaviour
 
     public void RalentitChute()
     {
-        _velocity.y *= _rayCastDetectionFloor.MinDistanceHit; 
+        _velocity.y = Physics2D.gravity.y * _timeToFall * _rayCastDetectionFloor.MinDistanceHit;
+    }
+
+    public void SetParent(Transform newParent)
+    {
+        _parentPlayerTr.parent = newParent;
+    }
+    public void SetNoneParent()
+    {
+        _parentPlayerTr.parent = null;
     }
 
     public float InputHorizontal { get => _inputHorizontal; set => _inputHorizontal = value; }

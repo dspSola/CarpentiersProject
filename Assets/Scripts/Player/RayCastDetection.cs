@@ -11,6 +11,7 @@ public class RayCastDetection : MonoBehaviour
     [SerializeField] private List<Transform> _originsRayCast;
 
     [SerializeField] private bool _ifActive, _ifOnOfRayCastTouch, _ifOnOfRayCastTouchAt0;
+    [SerializeField] private Transform _transformHit;
 
 
     private void FixedUpdate()
@@ -29,6 +30,7 @@ public class RayCastDetection : MonoBehaviour
         _maxDistanceHit = -999f;
         _ifOnOfRayCastTouch = false;
         _ifOnOfRayCastTouchAt0 = false;
+        _transformHit = null;
 
         float _moyenneAdition = 0f;
 
@@ -38,6 +40,8 @@ public class RayCastDetection : MonoBehaviour
 
             if (hit.collider != null)
             {
+                _transformHit = hit.transform;
+
                 _cptRayCastTouch++;
                 if (!_ifOnOfRayCastTouch)
                 {
@@ -91,4 +95,5 @@ public class RayCastDetection : MonoBehaviour
     public bool IfOnOfRayCastTouch { get => _ifOnOfRayCastTouch; set => _ifOnOfRayCastTouch = value; }
     public bool IfOnOfRayCastTouchAt0 { get => _ifOnOfRayCastTouchAt0; set => _ifOnOfRayCastTouchAt0 = value; }
     public float CptRayCastTouch { get => _cptRayCastTouch; set => _cptRayCastTouch = value; }
+    public Transform TransformHit { get => _transformHit; set => _transformHit = value; }
 }
