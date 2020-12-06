@@ -1932,7 +1932,7 @@ MonoBehaviour:
   _pressJump: 0
   _isInJump: 0
   _speed: 0
-  _speedWalk: 20
+  _speedWalk: 40
   _forceJump: 0.01
   _maxVelocityY: 10
   _timeInJump: 0
