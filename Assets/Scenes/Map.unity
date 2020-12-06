@@ -177,7 +177,7 @@ MonoBehaviour:
   - {fileID: 1250203620}
   - {fileID: 486494482}
   - {fileID: 735025151}
-  leadInTime: 0
+  leadInTime: 5
   audioCom: {fileID: 976591887}
 --- !u!1 &486494481
 GameObject:
@@ -211,7 +211,9 @@ MonoBehaviour:
   color: {r: 0, g: 0, b: 1, a: 1}
   targetVisuals: {fileID: 559086607}
   keyboardButton: 8
-  matchedPayloads: []
+  matchedPayloads:
+  - C
+  - C#/Bb
 --- !u!4 &486494483
 Transform:
   m_ObjectHideFlags: 0
@@ -350,7 +352,9 @@ MonoBehaviour:
   color: {r: 0, g: 0, b: 1, a: 1}
   targetVisuals: {fileID: 559086607}
   keyboardButton: 8
-  matchedPayloads: []
+  matchedPayloads:
+  - G#/Ab
+  - A
 --- !u!4 &579654876
 Transform:
   m_ObjectHideFlags: 0
@@ -397,7 +401,9 @@ MonoBehaviour:
   color: {r: 0, g: 0, b: 1, a: 1}
   targetVisuals: {fileID: 559086607}
   keyboardButton: 8
-  matchedPayloads: []
+  matchedPayloads:
+  - D
+  - D#/Eb
 --- !u!4 &735025152
 Transform:
   m_ObjectHideFlags: 0
@@ -582,7 +588,8 @@ MonoBehaviour:
   m_Script: {fileID: 316907577, guid: aa81bbec85a3f423193272a7c6154986, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  loadedKoreography: []
+  loadedKoreography:
+  - {fileID: 11400000, guid: c015478f82639a841a3b30d524f53378, type: 2}
   eventDelayInSeconds: 0
 --- !u!114 &976591886
 MonoBehaviour:
@@ -1097,7 +1104,9 @@ MonoBehaviour:
   color: {r: 0, g: 0, b: 1, a: 1}
   targetVisuals: {fileID: 559086607}
   keyboardButton: 8
-  matchedPayloads: []
+  matchedPayloads:
+  - A#/Bb
+  - B
 --- !u!4 &1250203621
 Transform:
   m_ObjectHideFlags: 0
@@ -1144,7 +1153,9 @@ MonoBehaviour:
   color: {r: 0, g: 0, b: 1, a: 1}
   targetVisuals: {fileID: 559086607}
   keyboardButton: 8
-  matchedPayloads: []
+  matchedPayloads:
+  - F#/Gb
+  - G
 --- !u!4 &1549997784
 Transform:
   m_ObjectHideFlags: 0
