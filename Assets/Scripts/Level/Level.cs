@@ -5,13 +5,13 @@ using UnityEngine;
 public class Level : MonoBehaviour
 {
     [SerializeField] private PlayerData _playerData;
-    [SerializeField] private float _timeOfGame, _score;
+    [SerializeField] private float _timeOfGame;
 
     private void Awake()
     {
         _playerData.InitPlayerData();
         _timeOfGame = 0;
-        _score = 0;
+        _playerData.Score = 0;
     }
 
     private void Start()
@@ -27,6 +27,7 @@ public class Level : MonoBehaviour
 
     private void AddScore()
     {
-        _score = _timeOfGame * _playerData.CptFragmentPartition * _playerData.GameFlow; 
+        //_playerData.Score = _timeOfGame * _playerData.CptFragmentPartition * _playerData.GameFlow; 
+        _playerData.Score = _timeOfGame * _playerData.GameFlow; 
     }
 }
