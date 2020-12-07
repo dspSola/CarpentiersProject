@@ -4,11 +4,10 @@ using UnityEngine;
  
 namespace SonicBloom.Koreo.Demos
 {
-	[AddComponentMenu("Koreographer/Demos/Rhythm Game/Rhythm Game Controller")]
+	[AddComponentMenu("Koreographer/Demos/Rhythm Game/Level Display")]
 	public class LevelDisplay : MonoBehaviour
     {
         [SerializeField] GameObject _platformPrefab;
-        [SerializeField] GameObject _contnerPlatforms;
 
 		#region Fields
 

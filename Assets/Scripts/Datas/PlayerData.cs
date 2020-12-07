@@ -9,16 +9,19 @@ public class PlayerData : ScriptableObject
     [SerializeField] private int _cptFragmentPartition;
     [SerializeField] private float _gameFlow;
     [SerializeField] private float _score;
+    [SerializeField] private bool _firstTouched;
 
     public void InitPlayerData()
     {
         _positionPlayer = new Vector2();
         _cptFragmentPartition = 0;
         _gameFlow = 1;
+        _firstTouched = false;
     }
 
     public Vector2 PositionPlayer { get => _positionPlayer; set => _positionPlayer = value; }
     public int CptFragmentPartition { get => _cptFragmentPartition; set => _cptFragmentPartition = value; }
     public float GameFlow { get => _gameFlow; set => _gameFlow = value; }
     public float Score { get => _score; set => _score = value; }
+    public bool FirstTouched { get => _firstTouched; set => _firstTouched = value; }
 }

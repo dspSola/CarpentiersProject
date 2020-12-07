@@ -29,4 +29,7 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/Score.unity
     guid: 85fb58ae5552fa84eb88ec7b302b9fb4
+  - enabled: 1
+    path: Assets/Scenes/DeadZone.unity
+    guid: 5c1ddbe17ef05b24c9b5a3921705eb66
   m_configObjects: {}
