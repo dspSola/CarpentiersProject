@@ -61,7 +61,7 @@ public class EndCutScene : MonoBehaviour
         yield return new WaitForEndOfFrame();
         _fade.SetBool("FadeOut", false);
         Debug.Log("Loading Game Scene...");
-        SceneManager.LoadScene(1);
+        SceneManager.LoadScene("Main");
     }
 }
 

@@ -5,9 +5,6 @@ EditorBuildSettings:
   m_ObjectHideFlags: 0
   serializedVersion: 2
   m_Scenes:
-  - enabled: 0
-    path: Assets/Intro + Menu/Scenes/Menu.unity
-    guid: 2a95d13bdbfa450469bcbacf840634b9
   - enabled: 1
     path: Assets/Intro + Menu/Scenes/Intro.unity
     guid: 9fc0d4010bbf28b4594072e72b8655ab
@@ -18,15 +15,9 @@ EditorBuildSettings:
     path: Assets/Scenes/VerticalTestScroll.unity
     guid: b21d4cedf5dd21547bc650b84bd53f40
   - enabled: 1
-    path: Assets/Scenes/Camera.unity
-    guid: e9f9f8bc3e3d80340ab74d7e0eb0444c
-  - enabled: 1
     path: Assets/Scenes/Player.unity
     guid: 87000d9a5c5fb8c42b20db0adf3cec72
   - enabled: 1
     path: Assets/Scenes/Map.unity
     guid: 6d8270303a003ad4fab4a93d856184ff
-  - enabled: 1
-    path: Assets/Scenes/Score.unity
-    guid: 85fb58ae5552fa84eb88ec7b302b9fb4
   m_configObjects: {}
