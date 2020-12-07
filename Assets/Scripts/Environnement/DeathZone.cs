@@ -9,9 +9,7 @@ public class DeathZone : MonoBehaviour
     {
         if(collision.gameObject.layer == 8)
         {
-            SceneManager.LoadScene("VerticalTestScroll");
-            SceneManager.LoadScene("Camera", LoadSceneMode.Additive);
-            SceneManager.LoadScene("Player", LoadSceneMode.Additive);
+            SceneManager.LoadScene("Main", LoadSceneMode.Single);
         }
     }
 }

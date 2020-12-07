@@ -10,6 +10,8 @@ namespace SonicBloom.Koreo.Demos
 	{
 		#region Fields
 
+		public Transform _parentTrNote;
+
 		[Tooltip("The Color of Note Objects and Buttons in this Lane.")]
 		public Color color = Color.blue;
 
@@ -198,7 +200,7 @@ namespace SonicBloom.Koreo.Demos
 
 				NotePrefab newObj = _gameController.GetFreshNoteObject();
 				newObj.Initialize(evt, color, this, _gameController);
-
+				newObj.transform.parent = _parentTrNote;
 				trackedNotes.Enqueue(newObj);
 
 				pendingEventIdx++;
