@@ -8,6 +8,6 @@ public class BackgroundScroller : MonoBehaviour
 
     void Update()
     {
-        transform.position -= new Vector3(transform.position.x, _scrollSpeed, transform.position.z);
+            transform.position -= new Vector3(transform.position.x, _scrollSpeed, transform.position.z);
     }
 }
