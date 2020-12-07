@@ -531,7 +531,7 @@ MonoBehaviour:
   - {fileID: 1379332148}
   - {fileID: 1831218854}
   - {fileID: 244008558}
-  _debugOnGui: 1
+  _debugOnGui: 0
 --- !u!1 &475547730
 GameObject:
   m_ObjectHideFlags: 0
@@ -645,7 +645,7 @@ MonoBehaviour:
     m_StretchHeight: 0
   _movePlayer: {fileID: 2015439528}
   _playerAnimatorController: {fileID: 1087834366}
-  _debugOnGui: 1
+  _debugOnGui: 0
 --- !u!114 &475547733
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -732,7 +732,7 @@ MonoBehaviour:
   _rayCastDetectionDown: {fileID: 690147330}
   _rayCastDetectionLeft: {fileID: 1531252904}
   _overLapFloor: {fileID: 1011891865}
-  _debugOnGui: 1
+  _debugOnGui: 0
 --- !u!1 &491007613
 GameObject:
   m_ObjectHideFlags: 0
